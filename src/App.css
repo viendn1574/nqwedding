@@ -1,18 +1,58 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+
 
 * {
     box-sizing: border-box;
 }
 
+@font-face {
+    font-family: 'arturo';
+    src: url('../public/zt-arturo-demo-heavy.ttf') format('truetype')
+}
+
 body {
-    font-family: 'Lato', sans-serif;
+    font-family: 'arturo';
 }
 
 h1 {
-    letter-spacing: 2px;
+    letter-spacing: 0px;
     text-align: center;
     text-transform: uppercase;
 }
+
+.tit {
+    letter-spacing: 0px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;;
+}
+
+h2 {
+    font-family: 'Pacifico';
+    font-size: medium;
+    letter-spacing: 0px;
+    text-align: right;
+    padding-right: 30%;
+}
+.img1 {
+    position: absolute;
+    margin-left: 37%;
+    z-index: 2;
+    width: 5%;
+  }
+.couple {
+    margin: auto;
+    width: 20%;
+}
+
+.title-area {
+    text-align:left;
+
+  }
+.post-area {
+    text-align:right;
+
+  }
 
 .countdown-wrapper {
     display: flex;
