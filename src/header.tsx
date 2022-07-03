@@ -73,9 +73,7 @@ export class WeddingHeader extends React.Component {
                         </div>
                     </nav>
                 </div>
-            <div
-                    className="text-center bg-image image-header"
-                >
+                <div className="text-center bg-image image-header">
                     <div className="mask mask2 h-100">
                         <div className="h-100 d-flex flex-column">
                             <div className="row row-empty"></div>
@@ -85,39 +83,37 @@ export class WeddingHeader extends React.Component {
                                     <div className="d-flex justify-content-center align-items-center h-100">
                                         <div className="text-white">
                                             <h1 className="header-title">Quang & Nhi</h1>
-                                            {/* <h4 className="header-subtitle">Are Getting Married</h4>
-                                            <h4 className="header-subtitle">Are Getting Married</h4> */}
                                             <span className="header-subtitle">Are getting married <br/> september 25, 2022 </span>
-                                            <div className="header__countdown">
-                                                <p className="countdown__title text--colored">Countdown <strong>to</strong> Wedding Ceremony</p>
-                                                <div className="countdown__block countdown">
-                                                    <div className="countdown__element countdown__month border--colored"> 
-                                                        <span className="count month text--colored">{months}</span><br/>
-                                                        <span className="label month_ref text--colored">month</span>
-                                                    </div>
-                                                    <div className="countdown__element countdown__days border--colored"> 
-                                                        <span className="count days text--colored">{days}</span><br/>
-                                                        <span className="label days_ref text--colored">days</span></div>
-                                                    <div className="countdown__element countdown__hours border--colored">
-                                                        <span className="count hours text--colored">{hours}</span><br/>
-                                                        <span className="label hours_ref text--colored">hours</span>
-                                                    </div>
-                                                    <div className="countdown__element countdown__minutes border--colored"> 
-                                                        <span className="count minutes text--colored">{minutes}</span><br/>
-                                                        <span className="label minutes_ref text--colored">minutes</span>
-                                                    </div>
-                                                    <div className="countdown__element countdown__seconds border--colored"> 
-                                                        <span className="count seconds text--colored">{seconds}</span><br/>
-                                                        <span className="label seconds_ref text--colored">seconds </span>
-                                                    </div>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div className="col"></div>
                             </div>
                             <div className="row"></div>
+                        </div>
+                    </div>
+                </div>
+                <div className="header__countdown">
+                    <p className="countdown__title text--colored">Countdown <strong>to</strong> Wedding Ceremony</p>
+                    <div className="countdown__block countdown">
+                        <div className="countdown__element countdown__month border--colored"> 
+                            <span className="count month text--colored">{months}</span><br/>
+                            <span className="label month_ref text--colored">month</span>
+                        </div>
+                        <div className="countdown__element countdown__days border--colored"> 
+                            <span className="count days text--colored">{days}</span><br/>
+                            <span className="label days_ref text--colored">days</span></div>
+                        <div className="countdown__element countdown__hours border--colored">
+                            <span className="count hours text--colored">{hours}</span><br/>
+                            <span className="label hours_ref text--colored">hours</span>
+                        </div>
+                        <div className="countdown__element countdown__minutes border--colored"> 
+                            <span className="count minutes text--colored">{minutes}</span><br/>
+                            <span className="label minutes_ref text--colored">minutes</span>
+                        </div>
+                        <div className="countdown__element countdown__seconds border--colored"> 
+                            <span className="count seconds text--colored">{seconds}</span><br/>
+                            <span className="label seconds_ref text--colored">seconds </span>
                         </div>
                     </div>
                 </div>
