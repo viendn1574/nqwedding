@@ -2,8 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Marcellus');
 
 .image-header {
-    background-image: url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/header.jpg');
+    background:linear-gradient(rgba(97, 88, 105, 0.35), rgba(97, 88, 105, 0.35)), url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/header.jpg');
     height: 740px;
+    background-position: center top;
+    background-size: cover;
 }
 
 .header-title {
