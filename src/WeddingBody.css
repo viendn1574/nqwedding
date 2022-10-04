@@ -230,19 +230,18 @@
     }
 }
 
-@media only screen and (max-width: 920px)
-{
-    .story__slider {
-        margin: 0;
-        padding: 0;
-    }
-}
-
 .story__slider {
     position: relative;
     margin-left: 107px;
     position: relative;
     margin-top: 130px;
+}
+@media only screen and (max-width: 920px)
+{
+    .story__slider {
+        margin-left: 0px;
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 920px)
@@ -282,10 +281,50 @@
     max-width: 352px;
 }
 
+@media only screen and (max-width: 920px)
+{
+    .story__slider-text {
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        max-width: 100%;
+    }
+}
+@media only screen and (max-width: 1040px)
+{
+    .story__slider-text {
+        margin-top: 0;
+    }
+}
+
 .slider__head-text {
     position: relative;
     padding-bottom: 15px;
     margin-bottom: 24px;
+}
+
+.slider__head-text::after {
+    content: "";
+    position: absolute;
+    width: 112px;
+    height: 1px;
+    background-color: #4F3566;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 920px)
+{
+    .slider__head-text::after {
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+    }
+
 }
 
 .slick-arrow-left {
@@ -306,6 +345,17 @@
     left: -10px;
 }
 
+@media screen and (max-width: 920px) {
+    .slick-arrow-left {
+        left: 60px;
+        width: 100px;
+    }
+    .slick-arrow-left:hover {
+        left: 50px;
+    }
+    
+}
+
 .slick-arrow-right {
     position: absolute;
     bottom: -30px;
@@ -324,17 +374,25 @@
 .slick-arrow-right:hover {
     left: 160px;
 }
-
+@media screen and (max-width: 920px) {
+    .slick-arrow-right {
+        left: 170px;
+        width: 100px;
+    }
+    .slick-arrow-right:hover {
+        left: 180px;
+    }
+}
 .photos {
     width: 100%;
     height: 500px;
     position: relative;
     padding-top: 4px;
-    padding-bottom: 120px;
+    padding-bottom: 10px;
 }
 
 .photos .s-title {
-    margin-bottom: 144px;
+    margin-bottom: 50px;
 }
 
 .slick-center {
@@ -356,9 +414,11 @@
     height: auto;
     margin:0 auto;
 } */
-.photos .swiper {
-    /* overflow: visible; */
-}
+/* .photos .swiper {
+    overflow: visible;
+    box-sizing: border-box;
+} */
+
 
 .swiper .swiper-slide-active img {
     position: absolute;
@@ -417,6 +477,13 @@
     justify-content: center;
 }
 
+@media only screen and (max-width: 920px)
+{
+    .venues__ceremony {
+        flex-direction: column;
+    }
+}
+
 .venues__ceremony {
     margin-bottom: 240px;
 }
@@ -431,6 +498,17 @@
 .venues__card {
     width: 560px;
     border: 8px solid #4F3566;
+}
+
+@media only screen and (max-width: 920px)
+{
+    .venues__card {
+        width: unset;
+        border: 8px solid #4F3566;
+        /* margin-left: -25px;
+        margin-right: 25px; */
+
+    }
 }
 
 .venues__card-head {
@@ -489,6 +567,15 @@
 .address__map {
     width: 576px;
     height: 408px;
+}
+
+@media only screen and (max-width: 920px)
+{
+    .address__map {
+        width: 100%;
+        height: 408px;
+        /* margin-left: -25px; */
+    }
 }
 
 .address__map--ceremony {

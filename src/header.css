@@ -6,6 +6,14 @@
     box-sizing: content-box;
 }
 
+.row {
+    border:0px;
+    margin-right:
+    0;
+    margin-left:0;
+    max-width:100%;
+}
+
 .image-header {
     background:linear-gradient(rgba(97, 88, 105, 0.35), rgba(97, 88, 105, 0.35)), url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/header.jpg');
     height: 740px;
@@ -183,7 +191,12 @@
     color: #4F3566;
 }
 .container {
-    width: 100%;
+    width: 93%;
+    justify-content: space-evenly
+}
+
+.container-sm {
+    width: 93%;
     justify-content: space-evenly
 }
 .header__menu-link {

@@ -38,6 +38,13 @@
     position: relative;
 }
 
+@media only screen and (max-width: 500px)
+{
+    .footer__name {
+        display: none;
+    }
+}
+
 .footer__image {
     position: relative;
 }
@@ -48,6 +55,28 @@
 
 .diana {
     margin-left: 56px;
+}
+
+@media only screen and (max-width: 700px)
+{
+    .footer__name {
+        font-size: 35px;
+    }
+    
+}
+
+@media only screen and (max-width: 700px)
+{
+    .jeremy {
+        margin-right: 36px;
+    }
+}
+
+@media only screen and (max-width: 700px)
+{
+    .diana {
+        margin-left: 36px;
+    }
 }
 
 .footer__image::after {
