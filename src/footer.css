@@ -1,0 +1,66 @@
+@import url(bootstrap/dist/css/bootstrap.css);
+@import url('https://fonts.googleapis.com/css?family=Marcellus');
+
+.footer {
+    min-height: 128px;
+    width: 100%;
+    background-color: #FAF0FF;
+    position: relative;
+}
+
+.footer__content {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, 4%);
+    -ms-transform: translate(-50%, 4%);
+    transform: translate(-50%, 4%);
+}
+
+.footer__name {
+    display: block;
+    font-family: "Marcellus", serif;
+    font-size: 56px;
+    line-height: 88px;
+    color: #4F3566;
+    position: relative;
+}
+
+.footer__image {
+    position: relative;
+}
+
+.jeremy {
+    margin-right: 56px;
+}
+
+.diana {
+    margin-left: 56px;
+}
+
+.footer__image::after {
+    content: "25 /12 /2022";
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    font-family: "Playfair Display", fangsong;
+    font-size: 20px;
+    line-height: 32px;
+    color: #4F3566;
+    white-space: nowrap;
+}

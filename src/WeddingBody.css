@@ -1,0 +1,546 @@
+@import url(bootstrap/dist/css/bootstrap.css);
+@import url('https://fonts.googleapis.com/css?family=Marcellus');
+
+.s-title {
+    font-family: "Marcellus", serif;
+    font-size: 56px;
+    line-height: 88px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #4F3566;
+}
+
+@media only screen and (max-width: 600px)
+{
+    .s-title {
+        font-size: 45px;
+        line-height: 70px;
+    }
+}
+
+.couple {
+    padding-top: 204px;
+    padding-bottom: 108px;
+}
+
+.couple .s-title {
+    margin-bottom: 88px;
+}
+
+.couple__groom {
+    margin-bottom: 62px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.couple__groom .couple__image {
+    margin-left: 14px;
+    margin-top: 34px;
+}
+
+.couple__image {
+    width: 352px;
+    height: 432px;
+    border: 8px solid #4F3566;
+    position: relative;
+}
+
+.couple__image-groom--left::after {
+    top: -60px;
+    left: 60px;
+    background-image: url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg');
+    
+}
+
+.couple__image::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+@media only screen and (max-width: 1100px) {
+    .couple__text--right {
+        margin-left: 100px;
+    }
+}
+
+.couple__text--right {
+    padding-left: 48px;
+    margin-left: 144px;
+}
+
+.couple__text {
+    max-width: 384px;
+}
+
+.couple__text-head {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 24px;
+}
+
+.couple__title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    color: #4F3566;
+    text-transform: uppercase;
+}
+
+.couple__subtitle {
+    font-family: "Lora", serif;
+    font-size: 24px;
+    line-height: 36px;
+    color: #4F3566;
+}
+
+.couple__text-head::after {
+    content: "";
+    position: absolute;
+    width: 112px;
+    height: 1px;
+    background-color: #4F3566;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.couple__descr {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+
+.couple__bride {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+@media only screen and (max-width: 800px)
+{
+    .couple__groom, .couple__bride {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+@media only screen and (max-width: 900px)
+{
+    .couple__groom {
+        justify-content: space-between;
+    }
+}
+
+.couple__bride .couple__image {
+    margin-right: 14px;
+    margin-top: 28px;
+}
+
+.couple__bride .couple__image {
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+    -ms-flex-order: 2;
+    order: 2;
+}
+
+.couple__image {
+    width: 352px;
+    height: 432px;
+    border: 8px solid #4F3566;
+    position: relative;
+}
+
+.couple__image-bride--right::after {
+    top: -60px;
+    right: 60px;
+    background-image: url(../img/groom.jpg);
+}
+
+@media only screen and (max-width: 1100px)
+{
+    .couple__text--left {
+        margin-right: 180px;
+    }
+}
+
+.couple__text--left {
+    margin-right: 224px;
+}
+.story {
+    position: relative;
+    padding-top: 22px;
+    padding-bottom: 64px;
+}
+
+/* @media only screen and (max-width: 920px)
+{
+    .story {
+        padding-top: 150px;
+    }
+} */
+
+.story::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 44.44%;
+    height: 100%;
+    background-color: #FAF0FF;
+}
+
+.story .s-title {
+    position: absolute;
+    z-index: 7;
+    top: 32px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    margin: 0px 0px 32px 0px;
+}
+
+.story__slide {
+    display: -webkit-box !important;
+    display: -webkit-flex !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    flex-direction: row;
+    padding-bottom: 36px;
+}
+
+@media only screen and (max-width: 920px)
+{
+    .story__slide {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media only screen and (max-width: 920px)
+{
+    .story__slider {
+        margin: 0;
+        padding: 0;
+    }
+}
+
+.story__slider {
+    position: relative;
+    margin-left: 107px;
+    position: relative;
+    margin-top: 130px;
+}
+
+@media only screen and (max-width: 920px)
+{
+    .story .s-title {
+        white-space: nowrap;
+    }
+}
+
+@media only screen and (min-width: 1400px)
+{
+    .story__slider-image img {
+        max-width: 576px !important;
+        height: 440px !important;
+    }
+}
+.story__slider-image {
+    width: 576px;
+}
+@media only screen and (max-width: 920px)
+{
+    .story__slider-image {
+        margin-bottom: 30px;
+        width: 100% !important;
+    }
+}
+.img-responsive {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.story__slider-text {
+    margin-top: 112px;
+    padding-left: 48px;
+    margin-left: 54px;
+    max-width: 352px;
+}
+
+.slider__head-text {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 24px;
+}
+
+.slick-arrow-left {
+    position: absolute;
+    bottom: -30px;
+    border: none;
+    background: none;
+    width: 130px;
+    height: 12px;
+    z-index: 3;
+    background: url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/arrow-left.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all .2s ease-out;
+}
+
+.slick-arrow-left:hover {
+    left: -10px;
+}
+
+.slick-arrow-right {
+    position: absolute;
+    bottom: -30px;
+    border: none;
+    background: none;
+    width: 130px;
+    height: 12px;
+    z-index: 3;
+    left: 150px;
+    background: url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/arrow-right.svg') no-repeat;
+    background-position: center center;
+    background-size: cover;
+    transition: all .2s ease-out;
+}
+
+.slick-arrow-right:hover {
+    left: 160px;
+}
+
+.photos {
+    width: 100%;
+    height: 500px;
+    position: relative;
+    padding-top: 4px;
+    padding-bottom: 120px;
+}
+
+.photos .s-title {
+    margin-bottom: 144px;
+}
+
+.slick-center {
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    transform: scale(1.25);
+
+}
+  
+.photos .slick-list { 
+    padding:45px 60px !important;
+    margin:0px 30px !important;
+
+}
+
+/* .photos .img-responsive {
+    display: block;
+    max-width: 80%;
+    height: auto;
+    margin:0 auto;
+} */
+.photos .swiper {
+    /* overflow: visible; */
+}
+
+.swiper .swiper-slide-active img {
+    position: absolute;
+    -webkit-transform: scale(1.29);
+    -ms-transform: scale(1.29);
+    transform: scale(1.29);
+    top: -38px;
+    left: 0;
+    z-index: 2;
+}
+
+.swiper .swiper-slide-active::before {
+    content: "";
+    position: absolute;
+    right: -50px;
+    top: -129px;
+    width: 32px;
+    height: 530px;
+    background-color: #fff;
+    z-index: 9;
+}
+
+.swiper .swiper-slide-active::after {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: -129px;
+    width: 32px;
+    height: 530px;
+    background-color: #fff;
+    z-index: 9;
+}
+
+.photo img {
+    width: 100%;
+}
+
+.swiper .swiper-slide-active {
+    position: relative;
+}
+.swiper-slide {
+    width: 320px;
+}
+.venues {
+    padding-top: 80px;
+    padding-bottom: 112px;
+}
+
+.venues .s-title {
+    padding-bottom: 48px;
+}
+
+.venues__ceremony {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.venues__ceremony {
+    margin-bottom: 240px;
+}
+
+.ceremony__card {
+    padding-top: 34px;
+    padding-left: 93px;
+    padding-right: 32px;
+    padding-bottom: 34px;
+}
+
+.venues__card {
+    width: 560px;
+    border: 8px solid #4F3566;
+}
+
+.venues__card-head {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 24px;
+}
+
+.venues__card-info .venues__card-block:first-child {
+    margin-bottom: 44px;
+}
+
+.venues__card-block {
+    display: flex;
+}
+
+.venues__card-label {
+    margin-right: 40px;
+}
+
+.venues__card-label {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #615869;
+}
+
+.venue__card-data {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #615869;
+}
+
+.venues__card-link {
+    display: block;
+    margin-top: 33px;
+    text-align: center;
+    opacity: 1;
+    -webkit-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4F3566;
+}
+.address__map-container--left {
+
+}
+
+.address__map {
+    width: 576px;
+    height: 408px;
+}
+
+.address__map--ceremony {
+    height: 100%;
+}
+
+.map {
+    height: 100%;
+}
+
+.venues__card-head {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 24px;
+}
+
+.venues__card-title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 44px;
+    text-transform: uppercase;
+    color: #3C3641;
+}
+
+.venues__card-head::after {
+    content: "";
+    position: absolute;
+    width: 112px;
+    height: 1px;
+    background-color: #4F3566;
+    bottom: 0;
+    left: 0;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.venues__card-link {
+    display: block;
+    margin-top: 33px;
+    text-align: center;
+    opacity: 1;
+    -webkit-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+.venues__card-link {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #4F3566;
+}
