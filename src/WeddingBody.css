@@ -502,7 +502,6 @@
 }
 .venues {
     padding-top: 80px;
-    padding-bottom: 112px;
 }
 
 .venues .s-title {
@@ -668,4 +667,65 @@
     font-size: 14px;
     line-height: 20px;
     color: #4F3566;
+}
+
+.repair {
+    margin-top: -140px;
+    padding-bottom: 280px;
+}
+
+.repair_card {
+    padding-bottom: 20px;
+}
+
+.repair_card_img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+}
+
+.repair_card_title {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+
+.repair_card_desc {
+    font-family: "Playfair Display", serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    width: 200px;
+}
+
+
+
+@media only screen and (min-width: 920px)
+{
+    .repair_card_img {
+        width: 250px;
+        height: 250px;
+        object-fit: cover;
+    }
+    
+}
+
+@media only screen and (max-width: 920px)
+{
+    .repair_card_title {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 24px;
+
+    }
+
+    .repair_card_desc {
+        width: 120px;
+    }
+    
+    
 }

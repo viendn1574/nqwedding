@@ -8,13 +8,14 @@ interface ModalImgProbs {
     setShowModal: any;
     title: string;
     fullscreen?: boolean;
+    desc?: string;
 }
 
 export default function ModalImage(probs: ModalImgProbs) {
     const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
     const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(true);
-    const { urlImg, setShowModal, title } = probs;  
+    const { urlImg, setShowModal, title, desc } = probs;  
 
     function handleShow(breakpoint: any) {
         setFullscreen(breakpoint);
@@ -28,8 +29,14 @@ export default function ModalImage(probs: ModalImgProbs) {
             <Modal.Title>{title}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-                <div className='d-flex justify-content-center'>
-                    <img className="img-responsive" src={urlImg} alt=""/>
+                <div className='d-flex flex-column justify-content-center align-items-center text-center'>
+                    <img className="img-responsive" style={{ paddingBottom: '20px'}} src={urlImg} alt=""/>
+                    <div className='couple__subtitle'>
+                        {title}
+                    </div>
+                    <div className='couple__descr'>
+                        {desc}
+                    </div>
                 </div>
             </Modal.Body>
         </Modal>

@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 // import required modules
 import Button from 'react-bootstrap/Button';
 import Gallery from './component/gallery/gallery';
+import GridGallery from './component/gallery/gridGallery';
 
 function SampleNextArrow(props: any) {
     const { onClick } = props;
@@ -103,49 +104,6 @@ export class WeddingBody extends React.Component {
             <section className="photos" id="photo">
                 <div className="container">
                     <h2 className="s-title text--colored"> Our Photos</h2>
-                    {/* <Swiper
-                        slidesPerView={1}
-                        spaceBetween={30}
-                        centeredSlides={true}
-                        loop={true}
-                        breakpoints={{
-                            720: {
-                                width: 720,
-                                slidesPerView: 3,
-                              },
-
-                            920: {
-                                width: 920,
-                                slidesPerView: 3,
-                              },
-                          }}
-                    >
-                        <SwiperSlide style={{width: '226.5px', marginRight: '32px'}}>
-                            <a data-fancybox data-src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" data-caption="Hello world">
-                                <img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide style={{width: '226.5px', marginRight: '32px'}}>
-                            <a data-fancybox data-src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" data-caption="Hello world">
-                                <img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide style={{width: '226.5px', marginRight: '32px'}}>
-                            <a data-fancybox data-src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" data-caption="Hello world">
-                                <img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide style={{width: '226.5px', marginRight: '32px'}}>
-                            <a data-fancybox data-src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" data-caption="Hello world">
-                                <img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/>
-                            </a>
-                        </SwiperSlide>
-                        <SwiperSlide style={{width: '226.5px', marginRight: '32px'}}>
-                            <a data-fancybox data-src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" data-caption="Hello world">
-                                <img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/>
-                            </a>
-                        </SwiperSlide>
-                    </Swiper> */}
                     <Gallery/>
                 </div>
             </section>
@@ -175,7 +133,17 @@ export class WeddingBody extends React.Component {
                     </div>
                     </div>
                 </div>
-                </section>
+            </section>
+
+            <section className="repair" id="repair">
+                <div className="container">
+                    <h2 className="s-title text--colored"> Repair</h2>
+                    <div >
+                        <GridGallery/>
+                    </div>
+
+                </div>
+            </section>
             </>
         )
     }
