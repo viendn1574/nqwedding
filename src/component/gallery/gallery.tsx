@@ -106,22 +106,6 @@ export default function Gallery() {
 				},
 			}
 		},
-        { // Image item:
-			itemId: '6',
-			mediaUrl: 'https://i.picsum.photos/id/674/200/300.jpg?hmac=kS3VQkm7AuZdYJGUABZGmnNj_3KtZ6Twgb5Qb9ITssY',
-			metaData: {
-				type: 'image',
-				height: 100,
-				width: 100,
-				title: 'sample-title',
-				description: 'sample-description',
-				focalPoint: [0, 0],
-				link: {
-					url: 'http://example.com',
-					target: '_blank'
-				},
-			}
-		},
 	]
 
 	// The options of the gallery (from the playground current state)
@@ -132,7 +116,7 @@ export default function Gallery() {
 	// The size of the gallery container. The images will fit themselves in it
 	const container = {
 		width: window.innerWidth,
-		height: 300,
+		height: 500,
 	};
 
 	// The eventsListener will notify you anytime something has happened in the gallery.
