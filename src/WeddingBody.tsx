@@ -140,16 +140,6 @@ export class WeddingBody extends React.Component {
                         slidesPerView={1}
                         spaceBetween={30}
                         centeredSlides={true}
-                        // pagination={{
-                        //     clickable: true,
-                        //     el: '.swiper-pagination',
-                        //     type: 'bullets',
-                        // }}
-                        // navigation={{
-                        //     prevEl: '.slidePrev-btn',
-                        //     nextEl: '.slideNext-btn'
-                        // }}
-                        // modules={[Navigation]}
                         loop={true}
                         breakpoints={{
                             720: {
