@@ -60,15 +60,38 @@
     height: 100%;
 }
 
-@media only screen and (max-width: 1100px) {
-    .couple__text--right {
-        margin-left: 100px;
-    }
-}
-
 .couple__text--right {
     padding-left: 48px;
     margin-left: 144px;
+}
+
+@media only screen and (max-width: 990px) {
+
+    .couple {
+        padding-top: 100px;
+    }
+    .couple__image {
+        border: 0px solid #4F3566;
+        width: 150px;
+        height: 150px;
+    }
+    .couple__image-groom--left::after {
+        left: 0px;
+        background-image: url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg');
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        
+    }
+    .couple__groom .couple__image {
+        margin-left: 0px;
+    }
+
+    .couple__text--right {
+        padding-left: 0px;
+        margin-left: 0px;
+    }
+    
 }
 
 .couple__text {
@@ -105,9 +128,13 @@
     background-color: #4F3566;
     bottom: 0;
     left: 0;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 990px) {
+    .couple__text-head::after {
+        left: 50%;
+    }
 }
 
 .couple__descr {
@@ -128,19 +155,21 @@
     justify-content: center;
 }
 
-@media only screen and (max-width: 800px)
+@media only screen and (max-width: 990px)
 {
-    .couple__groom, .couple__bride {
+    .couple__groom {
         justify-content: center;
         text-align: center;
         flex-direction: column;
+        align-items: center;
     }
-}
 
-@media only screen and (max-width: 900px)
-{
-    .couple__groom {
-        justify-content: space-between;
+    .couple__bride {
+        justify-content: center;
+        text-align: center;
+        flex-direction: column-reverse;
+        align-items: center;
+        padding-top: 75px;
     }
 }
 
@@ -156,29 +185,38 @@
     order: 2;
 }
 
-.couple__image {
-    width: 352px;
-    height: 432px;
-    border: 8px solid #4F3566;
-    position: relative;
-}
-
 .couple__image-bride--right::after {
     top: -60px;
     right: 60px;
     background-image: url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg');
 }
-
-@media only screen and (max-width: 1100px)
-{
-    .couple__text--left {
-        margin-right: 180px;
-    }
-}
-
 .couple__text--left {
     margin-right: 224px;
 }
+
+@media only screen and (max-width: 990px) {
+
+
+    .couple__image-bride--right::after {
+        left: 0px;
+        background-image: url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg');
+        border-radius: 50%;
+        width: 150px;
+        height: 150px;
+        
+    }
+    .couple__bride .couple__image {
+        margin-left: 0px;
+    }
+
+    .couple__text--left {
+        padding-left: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    
+}
+
 .story {
     position: relative;
     padding-top: 22px;

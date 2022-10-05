@@ -1,4 +1,3 @@
-import { Button, Modal } from '@mui/material';
 import React from 'react';
 import Slider from "react-slick";
 import './WeddingBody.css';
@@ -7,7 +6,8 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
-import { Pagination, Navigation } from "swiper";
+import Button from 'react-bootstrap/Button';
+import Gallery from './component/gallery/gallery';
 
 function SampleNextArrow(props: any) {
     const { onClick } = props;
@@ -31,10 +31,6 @@ function SampleNextArrow(props: any) {
 
 export class WeddingBody extends React.Component {
 
-    state = {
-        currentSliderIndexUrl: '',
-    };
-
     settings = {
         dots: false,
         infinite: true,
@@ -45,43 +41,14 @@ export class WeddingBody extends React.Component {
         prevArrow: <SamplePrevArrow />
     };
 
-    settingsPhoto = {
-        className: "center",
-        centerMode: true,
-        infinite: true,
-        centerPadding: "60px",
-        slidesToShow: 5,
-        speed: 500,
-        focusOnSelect: true,
-        nextArrow: <SampleNextArrow />,
-        prevArrow: <SamplePrevArrow />
-    };
-
-    constructor(probs: any) {    
-        super(probs);
-        this.imageSrc = this.imageSrc.bind(this);
-        this.unSelectImg = this.unSelectImg.bind(this);
-
-    };
-
-    imageSrc(e: any) {
-        this.setState({currentSliderIndexUrl: e.target.getAttribute('src')});
-    }
-
-    unSelectImg() {
-        this.setState({currentSliderIndexUrl: ''});
-    }
-
     render(): React.ReactNode {
-        const { currentSliderIndexUrl } = this.state;
 
         return (
             <>
-            <Modal open={currentSliderIndexUrl !== ''} onBackdropClick={this.unSelectImg} style={{display:'flex',alignItems:'center',justifyContent:'center'}}><img style={{height: '100%'}} src={currentSliderIndexUrl} /></Modal>
             <section className="couple" id="couple">
                 <div className="container">
                     <h2 className="s-title text--colored">Happy Couple</h2>
-                    {/* <div className="couple__groom">
+                    <div className="couple__groom">
                         <div className="couple__image couple__image-groom--left border--colored"></div>
                         <div className="couple__text couple__text--right">
                             <div className="couple__text-head text--colored">
@@ -93,10 +60,10 @@ export class WeddingBody extends React.Component {
                                 <p className="couple__descr">I got this amazing feeling as soon as I saw her and it lives with me every day and I promise that the bunny outfit had nothing to do with it. Needless to say it turned into a very expensive night out</p>
                             </div>
                         </div>
-                    </div> */}
-                    {/* <div className="couple__bride row g-3">
-                        <div className="couple__image couple__image-bride--right border--colored col-md-6 col-lg-4 col-xl-3"></div>
-                        <div className="couple__text couple__text--left col-md-6 col-lg-4 col-xl-3">
+                    </div>
+                    <div className="couple__bride">
+                        <div className="couple__image couple__image-bride--right border--colored"></div>
+                        <div className="couple__text couple__text--left">
                             <div className="couple__text-head text--colored">
                             <h3 className="couple__title text--colored">Diana</h3><span className="couple__subtitle text--colored">the Bride</span>
                             </div>
@@ -105,7 +72,7 @@ export class WeddingBody extends React.Component {
                             <p className="couple__descr">More importantly, we have the same life goals, the same priorities, the same attitudes to people and money and work and the same sense of what's right and wrong in life.  We say that we're soul mates and over the last 7 years I feel like we've become adults together and somehow shaped each other into becoming better people.</p>
                             </div>
                         </div>
-                    </div> */}
+                    </div>
                 </div>
             </section>
             <section className="story" id="story">
@@ -136,7 +103,7 @@ export class WeddingBody extends React.Component {
             <section className="photos" id="photo">
                 <div className="container">
                     <h2 className="s-title text--colored"> Our Photos</h2>
-                    <Swiper
+                    {/* <Swiper
                         slidesPerView={1}
                         spaceBetween={30}
                         centeredSlides={true}
@@ -178,8 +145,8 @@ export class WeddingBody extends React.Component {
                                 <img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/>
                             </a>
                         </SwiperSlide>
-                    </Swiper>
-
+                    </Swiper> */}
+                    <Gallery/>
                 </div>
             </section>
 
