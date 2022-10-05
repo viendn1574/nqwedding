@@ -1,7 +1,6 @@
 import { ProGallery } from 'pro-gallery';
 import 'pro-gallery/dist/statics/main.css';
 import { useState } from 'react';
-import $ from 'jquery';
 import ModalImage from '../modalImg/modalImg';
 
 export default function Gallery() {
