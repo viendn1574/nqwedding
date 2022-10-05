@@ -6,14 +6,13 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 // import required modules
-import Button from 'react-bootstrap/Button';
 import Gallery from './component/gallery/gallery';
 import GridGallery from './component/gallery/gridGallery';
 
 function SampleNextArrow(props: any) {
     const { onClick } = props;
     return (
-      <Button
+      <button
         className='slick-arrow-right'
         onClick={onClick}
       />
@@ -23,7 +22,7 @@ function SampleNextArrow(props: any) {
   function SamplePrevArrow(props: any) {
     const { onClick } = props;
     return (
-      <Button
+      <button
         className='slick-arrow-left'
         onClick={onClick}
       />
