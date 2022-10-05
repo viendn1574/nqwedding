@@ -1,7 +1,15 @@
 import { ProGallery } from 'pro-gallery';
 import 'pro-gallery/dist/statics/main.css';
+import { useState } from 'react';
+import $ from 'jquery';
+import ModalImage from '../modalImg/modalImg';
+
 export default function Gallery() {
 	// Add your images here...
+	const [imgUrl, setimgUrl] = useState('');
+	const [titleImg, setTitleImg] = useState('');
+	const [showFancy, setShowFancy] = useState(false);
+	
 	const items = [
 		{ // Image item:
 			itemId: '1',
@@ -14,7 +22,7 @@ export default function Gallery() {
 				description: 'sample-description',
 				focalPoint: [0, 0],
 				link: {
-					url: 'http://example.com',
+					url: 'https://i.picsum.photos/id/674/200/300.jpg?hmac=kS3VQkm7AuZdYJGUABZGmnNj_3KtZ6Twgb5Qb9ITssY',
 					target: '_blank'
 				},
 			}
@@ -125,16 +133,25 @@ export default function Gallery() {
 	// The size of the gallery container. The images will fit themselves in it
 	const container = {
 		width: window.innerWidth,
-		height: 300
+		height: 300,
 	};
 
 	// The eventsListener will notify you anytime something has happened in the gallery.
-	const eventsListener = (eventName: any, eventData: any) => console.log({eventName, eventData}); 
+	const eventsListener = (eventName: any, eventData: any) => {
+		if (eventName === 'ITEM_ACTION_TRIGGERED') {
+			setShowFancy(true);
+			setimgUrl(eventData.url);
+			setTitleImg(eventData.title)
+		}
+	}
+
 
 	// The scrollingElement is usually the window, if you are scrolling inside another element, suplly it here
 	const scrollingElement = window;
 
 	return (
+		<>
+		{ showFancy && <ModalImage urlImg={imgUrl} setShowModal={setShowFancy} title={titleImg} /> }
 		<ProGallery
 			items={items}
 			options={options}
@@ -142,5 +159,6 @@ export default function Gallery() {
 			eventsListener={eventsListener}
 			scrollingElement={scrollingElement}
 		/>
+		</>
 	);
 }
