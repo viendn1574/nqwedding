@@ -92,11 +92,10 @@ export class WeddingBody extends React.Component {
                     <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
                         <div className="story__slider-image">
                         {/* <iframe width="560" height="315" src="https://www.youtube.com/embed/CHw1b_1LVBA?autoplay=1&cc_load_policy=1&mute=1" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; muted" allowFullScreen></iframe> */}
-                            {/* <video poster="PATH-TO-STILL-IMAGE" controls autoPlay width="100%" height="440" loop muted>
+                            <video poster="https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4"  playsInline controls autoPlay width="100%" height="440" loop muted>
                                 <source src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4" type="video/mp4"/>
-                            </video> */}
+                            </video>
                             <CardMedia width="100%" height="440" autoPlay loop muted controls component='video' image='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4'/>
-                            <CardMedia component="iframe" width="100%" height="440" src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4?autoplay=1&mute' allow="autoplay; mute"/>
                         </div>
                         <div>
                             <div className="story__slider-text">
