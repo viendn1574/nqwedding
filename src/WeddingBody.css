@@ -539,11 +539,17 @@
 
 @media screen and (min-width: 1100px) {
     .photos {
+        height: 650px;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .photos {
         height: 550px;
     }
 }
 
-@media screen and (min-width: 1300px) {
+@media screen and (min-width: 1400px) {
     .photos {
         height: 650px;
     }
