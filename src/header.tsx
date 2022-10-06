@@ -46,9 +46,9 @@ export class WeddingHeader extends React.Component {
                 <Container>
                     <Navbar.Brand href="#home">
                         <img
-                        src="https://jd.exsythemes.com/img/header/logo.png"
-                        width="30"
-                        height="30"
+                        src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/logo.png"
+                        width="50"
+                        height="50"
                         className="d-inline-block align-top"
                         alt="React Bootstrap logo"
                         />

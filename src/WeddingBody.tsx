@@ -91,7 +91,7 @@ export class WeddingBody extends React.Component {
                     <h2 className="s-title text--colored"> Câu Chuyện Tụi Mình</h2>
                     <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
                         <div className="story__slider-image">
-                            <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' image='https://nqwedding.s3.ap-southeast-1.amazonaws.com/img_bienhinh.png' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4'/>
+                            <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/img_bienhinh.png' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4'/>
                         </div>
                         <div>
                             <div className="story__slider-text">
@@ -136,10 +136,7 @@ export class WeddingBody extends React.Component {
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
                             <div className="story__slider-image">
-                            <video poster="PATH-TO-STILL-IMAGE" autoPlay width="100%" height="440" loop muted>
-                                <source src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/conhanvideo.mp4" type="video/mp4"/>
-
-                            </video>
+                                <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/conhan.JPG' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/conhanvideo.mp4'/>
                             </div>
                             <div className="story__slider-text">
                                 <div className="slider__head-text text--colored"> 
