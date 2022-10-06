@@ -1,6 +1,9 @@
 import moment from 'moment';
 import React from 'react';
 import './header.css';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
 export class WeddingHeader extends React.Component {
     state = {
@@ -38,40 +41,30 @@ export class WeddingHeader extends React.Component {
         return (
             <header>
                 <div className='position-absolute w-100'>
-                    <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
-                        <div className="container-fluid ">
-                            <button
-                                className="navbar-toggler"
-                                type="button"
-                                data-mdb-toggle="collapse"
-                                data-mdb-target="#navbarExample01"
-                                aria-controls="navbarExample01"
-                                aria-expanded="false"
-                                aria-label="Toggle navigation"
-                            >
-                                <i className="fas fa-bars"></i>
-                            </button>
-                            <div className="collapse navbar-collapse " id="navbarExample01">
-                                <ul className="navbar-nav container mx-auto mb-2 mb-lg-0 ">
-                                <li className="nav-item active">
-                                    <a className="header__menu-link" aria-current="page" href="#">Home</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="header__menu-link" href="#">Happy couple</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="header__menu-link" href="#">Love story</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="header__menu-link" href="#">Our photo</a>
-                                </li>
-                                <li className="nav-item">
-                                    <a className="header__menu-link" href="#">Venuses</a>
-                                </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </nav>
+                <Navbar bg="transparent" expand="lg" variant="dark">
+                <Container>
+                    <Navbar.Brand href="#home">
+                        <img
+                        src="https://jd.exsythemes.com/img/header/logo.png"
+                        width="30"
+                        height="30"
+                        className="d-inline-block align-top"
+                        alt="React Bootstrap logo"
+                        />
+                    </Navbar.Brand>
+                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
+                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Nav className="container mx-auto mb-2 mb-lg-0">
+                        <Nav.Link className='header__menu-link' href="index.html">Home</Nav.Link>
+                        <Nav.Link className='header__menu-link' href="#couple">TỤI MÌNH</Nav.Link>
+                        <Nav.Link className='header__menu-link' href="#story">CÂU CHUYỆN</Nav.Link>
+                        <Nav.Link className='header__menu-link' href="#photos">HÌNH TỤI MÌNH</Nav.Link>
+                        <Nav.Link className='header__menu-link' href="#venues">ĐỊA ĐIỂM</Nav.Link>
+                        <Nav.Link className='header__menu-link' href="#repair">CHUẨN BỊ</Nav.Link>
+                     </Nav>
+                    </Navbar.Collapse>
+                </Container>
+                </Navbar>
                 </div>
                 <div className="text-center bg-image image-header">
                     <div className="mask mask2 h-100">
@@ -83,7 +76,7 @@ export class WeddingHeader extends React.Component {
                                     <div className="d-flex justify-content-center align-items-center h-100">
                                         <div className="text-white">
                                             <h1 className="header-title">Quang & Nhi</h1>
-                                            <span className="header-subtitle">Are getting married <br/> september 25, 2022 </span>
+                                            <span className="header-subtitle">Vậy là tụi mình cưới nhau <br/> 25.12.2022 <br/> 30.12.2022 </span>
                                         </div>
                                     </div>
                                 </div>
@@ -94,26 +87,26 @@ export class WeddingHeader extends React.Component {
                     </div>
                 </div>
                 <div className="header__countdown">
-                    <p className="countdown__title text--colored">Countdown <strong>to</strong> Wedding Ceremony</p>
+                    <p className="countdown__title text--colored">Cùng <strong>đếm</strong> ngược nào</p>
                     <div className="countdown__block countdown">
                         <div className="countdown__element countdown__month border--colored"> 
                             <span className="count month text--colored">{months}</span><br/>
-                            <span className="label month_ref text--colored">month</span>
+                            <span className="label month_ref text--colored">Tháng</span>
                         </div>
                         <div className="countdown__element countdown__days border--colored"> 
                             <span className="count days text--colored">{days}</span><br/>
-                            <span className="label days_ref text--colored">days</span></div>
+                            <span className="label days_ref text--colored">Ngày</span></div>
                         <div className="countdown__element countdown__hours border--colored">
                             <span className="count hours text--colored">{hours}</span><br/>
-                            <span className="label hours_ref text--colored">hours</span>
+                            <span className="label hours_ref text--colored">Tiếng</span>
                         </div>
                         <div className="countdown__element countdown__minutes border--colored"> 
                             <span className="count minutes text--colored">{minutes}</span><br/>
-                            <span className="label minutes_ref text--colored">minutes</span>
+                            <span className="label minutes_ref text--colored">Phút</span>
                         </div>
                         <div className="countdown__element countdown__seconds border--colored"> 
                             <span className="count seconds text--colored">{seconds}</span><br/>
-                            <span className="label seconds_ref text--colored">seconds </span>
+                            <span className="label seconds_ref text--colored">Giây </span>
                         </div>
                     </div>
                 </div>

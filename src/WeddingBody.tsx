@@ -47,7 +47,7 @@ export class WeddingBody extends React.Component {
             <>
             <section className="couple" id="couple">
                 <div className="container">
-                    <h2 className="s-title text--colored">Happy Couple</h2>
+                    <h2 className="s-title text--colored">Tụi Mình</h2>
                     <div className="couple__groom">
                         <div className="couple__image couple__image-groom--left border--colored"></div>
                         <div className="couple__text couple__text--right">
@@ -77,39 +77,87 @@ export class WeddingBody extends React.Component {
             </section>
             <section className="story" id="story">
                 <div className="container">
-                    <h2 className="s-title text--colored"> Love Story</h2>
+                    <h2 className="s-title text--colored"> Câu Chuyện Tụi Mình</h2>
                     <Slider className='story__slider' {...this.settings}>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
                             <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
-                                <h3 className="couple__title text--colored"> How We Met</h3>
+                                <h3 className="couple__title text--colored"> 10.08.2012: TỤI MÌNH GẶP NHAU</h3>
                             </div>
-                            <p className="story__slider-descr">How we met is an unlikely funny story! Three years ago he tweeted that he was moving and had a bunch of horror DVD’s he needed to get rid of. At the time we didn’t follow each other, so a mutual friend responded to his tweet and included me in on it.</p>
+                            <p className="story__slider-descr">Nhi là học sinh mới chuyển vào lớp, ngày đầu tiên vừa bước vào, mọi người vỗ tay ầm ầm, Nhi ngại nên đã đi thẳng ra ngoài, sau đó 2 năm học chung thì tụi mình rất mờ nhạt trong mắt nhau :)))</p>
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
                             <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
-                                <h3 className="couple__title text--colored"> How We Met</h3>
+                                <h3 className="couple__title text--colored"> 27.05.2014: TỤI MÌNH QUEN NHAU</h3>
                             </div>
-                            <p className="story__slider-descr">How we met is an unlikely funny story! Three years ago he tweeted that he was moving and had a bunch of horror DVD’s he needed to get rid of. At the time we didn’t follow each other, so a mutual friend responded to his tweet and included me in on it.</p>
+                            <p className="story__slider-descr">Sau 3 lần Quang hỏi cùng 1 câu hỏi, thì tụi mình quen nhau vậy thôi, đến giờ vẫn không hiểu tại sao :))</p>
+                            </div>
+                        </div>
+                        <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/></div>
+                            <div className="story__slider-text">
+                            <div className="slider__head-text text--colored"> 
+                                <h3 className="couple__title text--colored"> 2019: TỤI MÌNH TỐT NGHIÊP</h3>
+                            </div>
+                            <p className="story__slider-descr">Dù tụi mình học 2 trường đại học khác nhau, nhưng may mắn vẫn chung Làng đại học và cùng chung tuyến xe buýt. Sau mấy năm trời chở nhau đi học, chờ nhau ở bến xe thì tụi mình cũng tốt nghiệp.</p>
+                            </div>
+                        </div>
+                        <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/></div>
+                            <div className="story__slider-text">
+                            <div className="slider__head-text text--colored"> 
+                                <h3 className="couple__title text--colored"> 04.06.2022: TỤI MÌNH CÓ NHẪN</h3>
+                            </div>
+                            <p className="story__slider-descr">Đây là chiếc nhẫn đầu tiên và bó hoa đầu tiên Nhi được Quang tặng. Đó là hôm 8 năm 8 ngày tụi mình quen nhau, Quang nói số 8 khi nằm ngang là tượng trưng cho vô hạn, vĩnh cữu (add hình infinity dô dùm tui) nên muốn tụi mình cũng được như vậy. Lẽ ra ở tầng 88 sẽ đẹp hơn, nhưng Landmark chỉ có 81 tầng thoi, nên xài tạm tầng 77 vậy
+
+Nhắc lại món quà sinh nhật đầu tiên Nhi được tặng, là 1 cái bồn cầu đồ chơi bằng nhựa, xin nhắc lại là 1 cái bồn cầu thật ạ và lời chúc: “chúc ăn nhiều mau lớn to khỏe như siêu nhân”</p>
+                            </div>
+                        </div>
+                        <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/></div>
+                            <div className="story__slider-text">
+                            <div className="slider__head-text text--colored"> 
+                                <h3 className="couple__title text--colored"> 25.12.2022 - 30.12.2022: TỤI MÌNH ĐÁM CƯỚI NÈ</h3>
+                            </div>
+                            <p className="story__slider-descr">Không hẹn, không sắp đặt mà nó lại vào một ngày Noel và cuối năm tất bật, mong là mọi người sẽ chúc phúc cho tụi mình thiệt nhiều, dù là có mặt hay không thể đến dự, tụi mình luôn rất trân trọng. Đó cũng sẽ là những kỷ niệm khó quên, và sẽ đi cùng với Quang và Nhi cho đến suốt cuộc đời.
+Vậy là, bọn mình sắp cưới nhau, và sẽ cùng nhau bắt đầu một khởi đầu mới, hạnh phúc bên cạnh nhau!</p>
                             </div>
                         </div>
                     </Slider>
                 </div>
             </section>
-            <section className="photos" id="photo">
+
+            <section className="repair" id="repair">
                 <div className="container">
-                    <h2 className="s-title text--colored"> Our Photos</h2>
+                    <h2 className="s-title text--colored"> Chuẩn bị</h2>
+                    <div >
+                        <GridGallery/>
+                    </div>
+
+                </div>
+            </section>
+
+            <section className="photos" id="photos">
+                <div className="container">
+                    <h2 className="s-title text--colored"> Hành Trình 8 Năm Của Tụi Mình</h2>
                     <Gallery/>
                 </div>
             </section>
 
+            <section className="photos" id="photos">
+                <div className="container">
+                    <h2 className="s-title text--colored"> Hành Trình 8 Năm Của Tụi Mình</h2>
+                    <Gallery/>
+                </div>
+            </section>
+            
             <section className="venues" id="venues">
                 <div className="container">
-                    <h2 className="s-title text--colored"> Venues</h2>
+                    <h2 className="s-title text--colored"> Địa Điểm</h2>
                     <div className="container-sm">
                     <div className="venues__ceremony">
                         <div className="ceremony__card venues__card border--colored">
@@ -117,12 +165,20 @@ export class WeddingBody extends React.Component {
                             <h3 className="venues__card-title text--colored"> Wedding Ceremony</h3>
                         </div>
                         <div className="venues__card-info">
-                            <div className="venues__card-block"><span className="venues__card-label mrg">When</span>
-                            <time className="venues__card-data">11:30, May 16th, 2020</time>
+                            <div className="venues__card-block">
+                                <span className="venues__card-label mrg">Vào lúc</span>
+                                <span className="venue__card-data">17:30, Ngày 5 tháng 12, 2022</span>
                             </div>
-                            <div className="venues__card-block"><span className="venues__card-label">Where</span><span className="venue__card-data">Saint Thomas Church Fifth Avenue 1 W 53rd St, New York, NY 10019</span></div>
+                            <div className="venues__card-block">
+                                <span className="venues__card-label">Tại</span>
+                                <span className="venue__card-data">MAISON DE CHARME, Hẻm 793/57 Trần Xuân Soạn, Phường Tân Hưng, Quận 7, TP.HCM<br/></span>
+                            </div>
+                            <div className="venues__card-block" style={{paddingTop: '10px'}}>
+                                <span className="venues__card-label">Dresscode</span>
+                                <span className="venue__card-data">Vàng, cam, be, kem, nâu, đen.</span>
+                            </div>
                         </div>
-                        <a className="venues__card-link" href="#">See on map</a>
+                        <a className="venues__card-link" href="https://www.google.com/maps?ll=10.746948,106.701202&z=16&t=m&hl=en&gl=BG&mapclient=embed&cid=5734142382329396672">See on map</a>
                         </div>
                         <div className="address__map-container--left address__map">
                             <div className="address__map--ceremony map" id="address__map--ceremony">
@@ -131,16 +187,32 @@ export class WeddingBody extends React.Component {
                         </div>
                     </div>
                     </div>
-                </div>
-            </section>
 
-            <section className="repair" id="repair">
-                <div className="container">
-                    <h2 className="s-title text--colored"> Repair</h2>
-                    <div >
-                        <GridGallery/>
+                    <div className="container-sm">
+                    <div className="venues__ceremony">
+                        <div className="ceremony__card venues__card border--colored">
+                        <div className="venues__card-head text--colored"> 
+                            <h3 className="venues__card-title text--colored"> Wedding Ceremony</h3>
+                        </div>
+                        <div className="venues__card-info">
+                            <div className="venues__card-block">
+                                <span className="venues__card-label mrg">Vào lúc</span>
+                                <span className="venue__card-data">18:00, Ngày 30 tháng 12, 2022</span>
+                            </div>
+                            <div className="venues__card-block">
+                                <span className="venues__card-label">Tại</span>
+                                <span className="venue__card-data">Sảnh Gloria – Tầng 12, 284 - 286 Vườn Lài, phường Phú Thọ Hòa, quận Tân Phú, TP.HCM</span>
+                            </div>
+                        </div>
+                        <a className="venues__card-link" href="https://www.google.com/maps?ll=10.746948,106.701202&z=16&t=m&hl=en&gl=BG&mapclient=embed&cid=5734142382329396672">See on map</a>
+                        </div>
+                        <div className="address__map-container--left address__map">
+                            <div className="address__map--ceremony map" id="address__map--ceremony">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3008737273503!2d106.623220914749!3d10.788252392313469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752d9d5888fc19%3A0x172d76a84a0ca188!2zVHJ1bmcgdMOibSBo4buZaSBuZ2jhu4sgdGnhu4djIGPGsOG7m2kgQXNpYW5hIFBsYXphIChUw6JuIFBow7op!5e0!3m2!1sen!2s!4v1665053174644!5m2!1sen!2s" style={{border:0 , width:'100%', height: '100%'}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
                     </div>
-
+                    </div>
                 </div>
             </section>
             </>

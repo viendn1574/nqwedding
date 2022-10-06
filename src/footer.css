@@ -38,7 +38,7 @@
     position: relative;
 }
 
-@media only screen and (max-width: 500px)
+@media only screen and (max-width: 300px)
 {
     .footer__name {
         display: none;
@@ -65,19 +65,52 @@
     
 }
 
-@media only screen and (max-width: 700px)
+@media only screen and (max-width: 600px)
 {
-    .jeremy {
-        margin-right: 36px;
+    .footer__name {
+        font-size: 25px;
     }
+    .jeremy {
+        margin-right: 25px;
+    }
+    
+    .diana {
+        margin-left: 25px;
+    }
+    
 }
 
-@media only screen and (max-width: 700px)
+
+@media only screen and (max-width: 500px)
 {
-    .diana {
-        margin-left: 36px;
+    .footer__name {
+        font-size: 18px;
     }
+    .jeremy {
+        margin-right: 18px;
+    }
+    
+    .diana {
+        margin-left: 18px;
+    }
+    
 }
+
+@media only screen and (max-width: 400px)
+{
+    .footer__name {
+        font-size: 13px;
+    }
+    .jeremy {
+        margin-right: 13px;
+    }
+    
+    .diana {
+        margin-left: 13px;
+    }
+    
+}
+
 
 .footer__image::after {
     content: "25 /12 /2022";

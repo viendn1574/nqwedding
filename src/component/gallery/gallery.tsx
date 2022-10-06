@@ -121,7 +121,7 @@ export default function Gallery() {
 
 	// The eventsListener will notify you anytime something has happened in the gallery.
 	const eventsListener = (eventName: any, eventData: any) => {
-		if (eventName === 'ITEM_ACTION_TRIGGERED') {
+		if (eventName === 'ITEM_ACTION_TRIGGERED' || eventName === 'ITEM_CLICKED') {
 			setShowFancy(true);
 			setimgUrl(eventData.url);
 			setTitleImg(eventData.title)
