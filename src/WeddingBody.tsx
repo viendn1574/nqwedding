@@ -95,7 +95,8 @@ export class WeddingBody extends React.Component {
                             {/* <video poster="PATH-TO-STILL-IMAGE" controls autoPlay width="100%" height="440" loop muted>
                                 <source src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4" type="video/mp4"/>
                             </video> */}
-                            <CardMedia width="100%" height="440" autoPlay loop muted controls component='video' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4'/>
+                            <CardMedia width="100%" height="440" autoPlay loop muted controls component='video' image='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4'/>
+                            <CardMedia component="iframe" width="100%" height="440" src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4?autoplay=1&mute' allow="autoplay; mute"/>
                         </div>
                         <div>
                             <div className="story__slider-text">
