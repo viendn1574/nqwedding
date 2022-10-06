@@ -51,7 +51,7 @@ export default function GridGallery() {
 		{ showFancy && <ModalImage urlImg={imgUrl} setShowModal={setShowFancy} title={titleImg} desc={descImg}/> }
 		<div className="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 justify-content-center">
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard title='Thử váy cưới' desc='An và Trúc dắt mình đi thử váy linh tinh. Mình hông chọn vì cái váy này làm mình mập =)) ' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg' onClick={repairCardOnclick}/></div>
+                <RepairCard title='Thử váy cưới' desc='An và Trúc dắt mình đi thử váy linh tinh. Mình hông chọn vì cái váy này làm mình mập =)) ' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_vaycuoi.JPG' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
                 <RepairCard title='Thử váy cưới' desc='An và Trúc dắt mình đi thử váy linh tinh. Mình hông chọn vì cái váy này làm mình mập =)) ' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg' onClick={repairCardOnclick} /></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">

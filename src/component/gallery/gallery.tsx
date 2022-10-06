@@ -11,8 +11,8 @@ export default function Gallery() {
 	
 	const items = [
 		{ // Image item:
-			itemId: '1',
-			mediaUrl: 'https://i.picsum.photos/id/674/200/300.jpg?hmac=kS3VQkm7AuZdYJGUABZGmnNj_3KtZ6Twgb5Qb9ITssY',
+			itemId: '8nam1',
+			mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_2.JPG',
 			metaData: {
 				type: 'image',
 				height: 100,
@@ -21,14 +21,14 @@ export default function Gallery() {
 				description: 'sample-description',
 				focalPoint: [0, 0],
 				link: {
-					url: 'https://i.picsum.photos/id/674/200/300.jpg?hmac=kS3VQkm7AuZdYJGUABZGmnNj_3KtZ6Twgb5Qb9ITssY',
+					url: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_2.JPG',
 					target: '_blank'
 				},
 			}
 		},
 		{ // Another Image item:
-			itemId: '2',
-			mediaUrl: 'https://i.picsum.photos/id/1003/1181/1772.jpg?hmac=oN9fHMXiqe9Zq2RM6XT-RVZkojgPnECWwyEF1RvvTZk',
+			itemId: '8nam2',
+			mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_4.JPG',
 			metaData: {
 				type: 'image',
 				height: 100,
@@ -43,8 +43,8 @@ export default function Gallery() {
 			}
 		},
         { // Another Image item:
-			itemId: '3',
-			mediaUrl: 'https://i.picsum.photos/id/1003/1181/1772.jpg?hmac=oN9fHMXiqe9Zq2RM6XT-RVZkojgPnECWwyEF1RvvTZk',
+			itemId: '8nam3',
+			mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_9.JPG',
 			metaData: {
 				type: 'image',
 				height: 300,
@@ -59,8 +59,8 @@ export default function Gallery() {
 			}
 		},
         { // Another Image item:
-			itemId: '4',
-			mediaUrl: 'https://i.picsum.photos/id/1003/1181/1772.jpg?hmac=oN9fHMXiqe9Zq2RM6XT-RVZkojgPnECWwyEF1RvvTZk',
+			itemId: '8nam4',
+			mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_11.JPG',
 			metaData: {
 				type: 'image',
 				height: 300,
@@ -75,8 +75,8 @@ export default function Gallery() {
 			}
 		},
         { // Another Image item:
-			itemId: '4',
-			mediaUrl: 'https://i.picsum.photos/id/1003/1181/1772.jpg?hmac=oN9fHMXiqe9Zq2RM6XT-RVZkojgPnECWwyEF1RvvTZk',
+			itemId: '8nam5',
+			mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
 			metaData: {
 				type: 'image',
 				height: 100,
@@ -91,8 +91,8 @@ export default function Gallery() {
 			}
 		},
         { // Another Image item:
-			itemId: '5',
-			mediaUrl: 'https://i.picsum.photos/id/1003/1181/1772.jpg?hmac=oN9fHMXiqe9Zq2RM6XT-RVZkojgPnECWwyEF1RvvTZk',
+			itemId: '8nam6',
+			mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
 			metaData: {
 				type: 'image',
 				height: 100,

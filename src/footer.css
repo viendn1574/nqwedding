@@ -4,7 +4,7 @@
 .footer {
     min-height: 128px;
     width: 100%;
-    background-color: #FAF0FF;
+    background-color: #FFEBCD;
     position: relative;
 }
 
@@ -31,10 +31,10 @@
 
 .footer__name {
     display: block;
-    font-family: "Marcellus", serif;
+    font-family: "Baloo 2";
     font-size: 56px;
     line-height: 88px;
-    color: #4F3566;
+    color: #7E3117;
     position: relative;
 }
 

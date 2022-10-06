@@ -41,6 +41,14 @@ export class WeddingBody extends React.Component {
         prevArrow: <SamplePrevArrow />
     };
 
+    settings1 = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+
     render(): React.ReactNode {
 
         return (
@@ -52,7 +60,7 @@ export class WeddingBody extends React.Component {
                         <div className="couple__image couple__image-groom--left border--colored"></div>
                         <div className="couple__text couple__text--right">
                             <div className="couple__text-head text--colored">
-                                <h3 className="couple__title text--colored">Jeremy</h3>
+                                <h3 className="couple__title text--colored">Quang</h3>
                                 <span className="couple__subtitle text--colored">the Groom</span>
                             </div>
                             <div className="couple__text-body">
@@ -65,7 +73,7 @@ export class WeddingBody extends React.Component {
                         <div className="couple__image couple__image-bride--right border--colored"></div>
                         <div className="couple__text couple__text--left">
                             <div className="couple__text-head text--colored">
-                            <h3 className="couple__title text--colored">Diana</h3><span className="couple__subtitle text--colored">the Bride</span>
+                            <h3 className="couple__title text--colored">Nhi</h3><span className="couple__subtitle text--colored">the Bride</span>
                             </div>
                             <div className="couple__text-body">
                             <p className="couple__descr">Jeremy and I have absolutely no hobbies or interests in common at all!  I fact, we're pretty much complete opposites! But who needs stuff in common? It's over-rated!  </p>
@@ -75,12 +83,31 @@ export class WeddingBody extends React.Component {
                     </div>
                 </div>
             </section>
-            <section className="story" id="story">
+            <section className="story1" id="story">
                 <div className="container">
                     <h2 className="s-title text--colored"> Câu Chuyện Tụi Mình</h2>
+                    <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
+                        <div className="story__slider-image">
+                            <video poster="PATH-TO-STILL-IMAGE" autoPlay width="100%" height="440" loop muted>
+                                <source src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4" type="video/mp4"/>
+                            </video>
+                        </div>
+                        <div>
+                            <div className="story__slider-text">
+                                < p className="story__slider-descr">Năm 18 tuổi, tụi mình cùng nhau tốt nghiệp học sinh cuối cấp.</p>
+                            </div>
+                            <div className="story__slider-text">
+                                <p className="story__slider-descr">Năm 26 tuổi, tụi mình cùng nhau tốt nghiệp học sinh cuối cấp.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="story" id="story">
+                <div className="container">
                     <Slider className='story__slider' {...this.settings}>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/></div>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/gapnhau1.JPG" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
                                 <h3 className="couple__title text--colored"> 10.08.2012: TỤI MÌNH GẶP NHAU</h3>
@@ -89,7 +116,7 @@ export class WeddingBody extends React.Component {
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/></div>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/quennhau.JPG" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
                                 <h3 className="couple__title text--colored"> 27.05.2014: TỤI MÌNH QUEN NHAU</h3>
@@ -98,7 +125,7 @@ export class WeddingBody extends React.Component {
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/></div>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/totnghiep.JPG" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
                                 <h3 className="couple__title text--colored"> 2019: TỤI MÌNH TỐT NGHIÊP</h3>
@@ -107,12 +134,17 @@ export class WeddingBody extends React.Component {
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/></div>
-                            <div className="story__slider-text">
-                            <div className="slider__head-text text--colored"> 
-                                <h3 className="couple__title text--colored"> 04.06.2022: TỤI MÌNH CÓ NHẪN</h3>
+                            <div className="story__slider-image">
+                            <video poster="PATH-TO-STILL-IMAGE" autoPlay width="100%" height="440" loop muted>
+                                <source src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/conhanvideo.mp4" type="video/mp4"/>
+
+                            </video>
                             </div>
-                            <p className="story__slider-descr">Đây là chiếc nhẫn đầu tiên và bó hoa đầu tiên Nhi được Quang tặng. Đó là hôm 8 năm 8 ngày tụi mình quen nhau, Quang nói số 8 khi nằm ngang là tượng trưng cho vô hạn, vĩnh cữu (add hình infinity dô dùm tui) nên muốn tụi mình cũng được như vậy. Lẽ ra ở tầng 88 sẽ đẹp hơn, nhưng Landmark chỉ có 81 tầng thoi, nên xài tạm tầng 77 vậy
+                            <div className="story__slider-text">
+                                <div className="slider__head-text text--colored"> 
+                                    <h3 className="couple__title text--colored"> 04.06.2022: TỤI MÌNH CÓ NHẪN</h3>
+                                </div>
+                                <p className="story__slider-descr">Đây là chiếc nhẫn đầu tiên và bó hoa đầu tiên Nhi được Quang tặng. Đó là hôm 8 năm 8 ngày tụi mình quen nhau, Quang nói số 8 khi nằm ngang là tượng trưng cho vô hạn, vĩnh cữu (add hình infinity dô dùm tui) nên muốn tụi mình cũng được như vậy. Lẽ ra ở tầng 88 sẽ đẹp hơn, nhưng Landmark chỉ có 81 tầng thoi, nên xài tạm tầng 77 vậy
 
 Nhắc lại món quà sinh nhật đầu tiên Nhi được tặng, là 1 cái bồn cầu đồ chơi bằng nhựa, xin nhắc lại là 1 cái bồn cầu thật ạ và lời chúc: “chúc ăn nhiều mau lớn to khỏe như siêu nhân”</p>
                             </div>
@@ -150,7 +182,7 @@ Vậy là, bọn mình sắp cưới nhau, và sẽ cùng nhau bắt đầu mộ
 
             <section className="photos" id="photos">
                 <div className="container">
-                    <h2 className="s-title text--colored"> Hành Trình 8 Năm Của Tụi Mình</h2>
+                    <h2 className="s-title text--colored"> Hình Cưới Tụi Mình</h2>
                     <Gallery/>
                 </div>
             </section>
