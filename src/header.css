@@ -120,7 +120,6 @@
     }
 }
 
-
 @media only screen and (max-width: 550px)
 {
     .header__countdown {
@@ -246,4 +245,45 @@
     color: #fff;
     text-transform: uppercase;
     text-decoration: none;
+}
+body:-webkit-full-page-media {
+    background-color: rgb(38, 38, 38);
+}
+
+audio {
+    /* width: 200px;
+    height: 25px; */
+}
+::-webkit-media-controls-enclosure,
+audio::-webkit-media-controls-panel {
+    display: flex;
+    direction: ltr;
+    flex-direction: row;
+    align-items: center;
+    -webkit-user-select: none;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    z-index: 0;
+    overflow: hidden;
+    height: 16px;
+    text-align: right;
+    background-color: transparent;
+    align-content: flex-start;
+
+}
+
+/* audio::-webkit-media-controls-volume-slider {
+    display: none !important;
+} */
+
+audio::-webkit-media-controls-timeline-container {
+    -webkit-appearance: media-controls-background;
+    display: none;
+    background-color: transparent !important;
+}
+
+audio::-webkit-media-controls-current-time-display {
+    display: none;
+    background-color: transparent !important;
 }

@@ -15,6 +15,7 @@ export class WeddingHeader extends React.Component {
     };
     interval: any = undefined;
     componentDidMount() {
+        (document?.getElementById('audio') as any)?.play();
         this.interval = setInterval(() => {
             const then = moment("25122022180000", "DDMMYYYYhhmmss");
             const now = moment();
@@ -58,9 +59,9 @@ export class WeddingHeader extends React.Component {
                         <Nav.Link className='header__menu-link' href="index.html">Home</Nav.Link>
                         <Nav.Link className='header__menu-link' href="#couple">TỤI MÌNH</Nav.Link>
                         <Nav.Link className='header__menu-link' href="#story">CÂU CHUYỆN</Nav.Link>
+                        <Nav.Link className='header__menu-link' href="#repair">CHUẨN BỊ</Nav.Link>
                         <Nav.Link className='header__menu-link' href="#photos">HÌNH TỤI MÌNH</Nav.Link>
                         <Nav.Link className='header__menu-link' href="#venues">ĐỊA ĐIỂM</Nav.Link>
-                        <Nav.Link className='header__menu-link' href="#repair">CHUẨN BỊ</Nav.Link>
                      </Nav>
                     </Navbar.Collapse>
                 </Container>
@@ -73,10 +74,10 @@ export class WeddingHeader extends React.Component {
                             <div className="row row-heigh">
                                 <div className="col"></div>
                                 <div className="col-8 border-lg">
-                                    <div className="d-flex justify-content-center align-items-center h-100">
-                                        <div className="text-white">
+                                    <div className="d-flex flex-column justify-content-center align-items-center h-100">
+                                        <div className="text-white d-flex flex-column justify-content-center align-items-center">
                                             <h1 className="header-title">Quang & Nhi</h1>
-                                            <span className="header-subtitle">Vậy là tụi mình cưới nhau <br/> 25.12.2022 <br/> 30.12.2022 </span>
+                                            <span className="header-subtitle">Vậy là tụi mình cưới nhau <br/> 25.12.2022 <br/> 30.12.2022 </span>                                         
                                         </div>
                                     </div>
                                 </div>
@@ -86,7 +87,7 @@ export class WeddingHeader extends React.Component {
                         </div>
                     </div>
                 </div>
-                <div className="header__countdown">
+                <div className="header__countdown d-flex flex-column justify-content-center align-items-center">
                     <p className="countdown__title text--colored">Cùng <strong>đếm</strong> ngược nào</p>
                     <div className="countdown__block countdown">
                         <div className="countdown__element countdown__month border--colored"> 
@@ -109,6 +110,17 @@ export class WeddingHeader extends React.Component {
                             <span className="label seconds_ref text--colored">Giây </span>
                         </div>
                     </div>
+                    <audio
+                        loop
+                        autoPlay
+                        controls
+                        style={{paddingTop:'10px'}}
+                        src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/Roi+Toi+Luon+-+Nal.mp3">
+                            <source src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/Roi+Toi+Luon+-+Nal.mp3'/>
+                            <a href="https://nqwedding.s3.ap-southeast-1.amazonaws.com/Roi+Toi+Luon+-+Nal.mp3">
+                                Download audio
+                            </a>
+                    </audio>
                 </div>
             </header>
         )
