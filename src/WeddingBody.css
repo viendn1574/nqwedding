@@ -555,6 +555,12 @@
     }
 }
 
+@media screen and (min-width: 1700px) {
+    .photos {
+        height: 750px;
+    }
+}
+
 
 .photos .s-title {
     margin-bottom: 50px;
