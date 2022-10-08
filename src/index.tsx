@@ -1,20 +1,33 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { WeddingFooter } from './footer';
-import { WeddingHeader } from './header';
-import { WeddingBody } from './WeddingBody';
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
+import HomePage from './pages/HomePage';
+import PhotoPage from './pages/PhotoPage';
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: (
+      <HomePage />
+    ),
+  },
+  {
+    path: "/photos",
+    element: (
+      <PhotoPage />
+    ),
+  },
+]);
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
 
 root.render(
-  <div className='d-flex flex-column'>
-    <WeddingHeader />
-    <WeddingBody />
-    <WeddingFooter />
-  </div>
-
+  <RouterProvider router={router} />
 );
 
