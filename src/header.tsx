@@ -6,6 +6,20 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 
 export class WeddingHeader extends React.Component {
+    private navLinkRef
+
+    constructor(props: any) {
+        super(props);
+        this.navLinkRef = {
+            home: React.createRef<HTMLAnchorElement>(),
+            couple: React.createRef<HTMLAnchorElement>(),
+            story: React.createRef<HTMLAnchorElement>(),
+            prepair: React.createRef<HTMLAnchorElement>(),
+            photos: React.createRef<HTMLAnchorElement>(),
+            venues: React.createRef<HTMLAnchorElement>(),
+        }
+    }
+
     state = {
         months: undefined,
         days: undefined,
@@ -33,6 +47,10 @@ export class WeddingHeader extends React.Component {
             clearInterval(this.interval);
         }
     }
+
+    scrollTo(ref: React.RefObject<HTMLAnchorElement>) {
+        ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
     
     render(): React.ReactNode {
         const { months, days, hours, minutes, seconds } = this.state;
@@ -44,7 +62,7 @@ export class WeddingHeader extends React.Component {
                 <div className='position-absolute w-100'>
                 <Navbar bg="transparent" expand="lg" variant="dark">
                 <Container>
-                    <Navbar.Brand href="#home">
+                    <Navbar.Brand href="/">
                         <img
                         src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/logo.png"
                         width="50"
@@ -56,12 +74,12 @@ export class WeddingHeader extends React.Component {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="container mx-auto mb-2 mb-lg-0">
-                        <Nav.Link className='header__menu-link' href="index.html">Home</Nav.Link>
-                        <Nav.Link className='header__menu-link' href="#couple">TỤI MÌNH</Nav.Link>
-                        <Nav.Link className='header__menu-link' href="#story">CÂU CHUYỆN</Nav.Link>
-                        <Nav.Link className='header__menu-link' href="#repair">CHUẨN BỊ</Nav.Link>
-                        <Nav.Link className='header__menu-link' href="#photos">HÌNH TỤI MÌNH</Nav.Link>
-                        <Nav.Link className='header__menu-link' href="#venues">ĐỊA ĐIỂM</Nav.Link>
+                        <Nav.Link className='header__menu-link' href="/">Home</Nav.Link>
+                        <Nav.Link className='header__menu-link' onClick={(e) => this.scrollTo(this.navLinkRef.couple)} ref={this.navLinkRef.couple} href="/#couple">TỤI MÌNH</Nav.Link>
+                        <Nav.Link className='header__menu-link' onClick={(e) => this.scrollTo(this.navLinkRef.story)} ref={this.navLinkRef.story} href="/#story">CÂU CHUYỆN</Nav.Link>
+                        <Nav.Link className='header__menu-link' onClick={(e) => this.scrollTo(this.navLinkRef.prepair)} ref={this.navLinkRef.prepair} href="/#repair">CHUẨN BỊ</Nav.Link>
+                        <Nav.Link className='header__menu-link' onClick={(e) => this.scrollTo(this.navLinkRef.photos)} ref={this.navLinkRef.photos} href="/#photos">HÌNH TỤI MÌNH</Nav.Link>
+                        <Nav.Link className='header__menu-link' onClick={(e) => this.scrollTo(this.navLinkRef.venues)} ref={this.navLinkRef.venues} href="/#venues">ĐỊA ĐIỂM</Nav.Link>
                      </Nav>
                     </Navbar.Collapse>
                 </Container>
