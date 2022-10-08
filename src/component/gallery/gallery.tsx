@@ -51,7 +51,7 @@ export default function Gallery(props: GalleryProps) {
 			}}>
 				{showFancy && <ModalImage urlImg={imgUrl} setShowModal={setShowFancy} title={titleImg} />}
 				<ProGallery
-					items={items.slice(0, 7)} // too many items here will break layout
+					items={items.slice(0, 6)} // too many items here will break layout
 					options={options}
 					container={container}
 					eventsListener={eventsListener}
