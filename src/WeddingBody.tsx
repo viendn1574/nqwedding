@@ -8,7 +8,8 @@ import "swiper/css/pagination";
 // import required modules
 import Gallery from './component/gallery/gallery';
 import GridGallery from './component/gallery/gridGallery';
-import { CardMedia } from '@mui/material';
+import { Button, CardMedia } from '@mui/material';
+import { PhotoType } from './component/gallery/Photo';
 
 function SampleNextArrow(props: any) {
     const { onClick } = props;
@@ -174,14 +175,14 @@ Vậy là, bọn mình sắp cưới nhau, và sẽ cùng nhau bắt đầu mộ
             <section className="photos" id="photos">
                 <div className="container">
                     <h2 className="s-title text--colored"> Hành Trình 8 Năm Của Tụi Mình</h2>
-                    <Gallery/>
+                    <Gallery type={PhotoType.EightYear}/>
                 </div>
             </section>
 
             <section className="photos" id="photos">
                 <div className="container">
                     <h2 className="s-title text--colored"> Hình Cưới Tụi Mình</h2>
-                    <Gallery/>
+                    <Gallery type={PhotoType.Wedding}/>
                 </div>
             </section>
             

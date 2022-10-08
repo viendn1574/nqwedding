@@ -1,15 +1,23 @@
+import { Box, Button } from '@mui/material';
 import { ProGallery } from 'pro-gallery';
 import 'pro-gallery/dist/statics/main.css';
 import { useState } from 'react';
 import ModalImage from '../modalImg/modalImg';
+import { PhotoType } from './Photo';
 import { items } from './Photo.constants';
 
-export default function Gallery() {
+interface GalleryProps {
+	type: PhotoType;
+}
+
+export default function Gallery(props: GalleryProps) {
 	// Add your images here...
 	const [imgUrl, setimgUrl] = useState('');
 	const [titleImg, setTitleImg] = useState('');
 	const [showFancy, setShowFancy] = useState(false);
-	
+
+	const { type } = props;
+
 	// The options of the gallery (from the playground current state)
 	const options = {
 		galleryLayout: -1,
@@ -36,14 +44,30 @@ export default function Gallery() {
 
 	return (
 		<>
-		{ showFancy && <ModalImage urlImg={imgUrl} setShowModal={setShowFancy} title={titleImg} /> }
-		<ProGallery
-			items={items}
-			options={options}
-			container={container}
-			eventsListener={eventsListener}
-			scrollingElement={scrollingElement}
-		/>
+			<Box sx={{
+				alignItems: "center",
+				display: "flex",
+				flexDirection: "column",
+			}}>
+				{showFancy && <ModalImage urlImg={imgUrl} setShowModal={setShowFancy} title={titleImg} />}
+				<ProGallery
+					items={items.slice(0, 7)} // too many items here will break layout
+					options={options}
+					container={container}
+					eventsListener={eventsListener}
+					scrollingElement={scrollingElement}
+				/>
+				<Button
+					sx={{
+						marginTop: "3%"
+					}}
+					variant='outlined'
+					color='secondary'
+					href={`/photos/${type}`}
+				>
+					Show more
+				</Button>
+			</Box>
 		</>
 	);
 }

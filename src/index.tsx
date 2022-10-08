@@ -16,7 +16,7 @@ const router = createBrowserRouter([
     ),
   },
   {
-    path: "/photos",
+    path: "/photos/:type",
     element: (
       <PhotoPage />
     ),
