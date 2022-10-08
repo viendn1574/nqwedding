@@ -49,7 +49,9 @@ export class WeddingHeader extends React.Component {
     }
 
     scrollTo(ref: React.RefObject<HTMLAnchorElement>) {
-        ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        setTimeout(() => {
+            ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        });
     }
     
     render(): React.ReactNode {

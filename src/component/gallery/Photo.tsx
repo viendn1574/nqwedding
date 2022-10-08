@@ -22,7 +22,9 @@ const Photo: React.FunctionComponent = () => {
     };
 
     React.useEffect(() => {
-        tabRef[tabValue as PhotoType].current?.scrollIntoView({behavior: "smooth", block: "start"});
+        setTimeout(() => {
+            tabRef[tabValue as PhotoType].current?.scrollIntoView({ behavior: "smooth", block: "start" });
+        }, 1000);
     }, [tabValue]);
 
     const renderImageList = (items: any[]) => {
