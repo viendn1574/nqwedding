@@ -6,14 +6,10 @@ import { items } from './Photo.constants';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { useParams } from 'react-router-dom';
+import { scroller } from 'react-scroll';
 
 const Photo: React.FunctionComponent = () => {
     const { type } = useParams();
-
-    const tabRef = {
-        [PhotoType.EightYear]: React.createRef<HTMLAnchorElement>(),
-        [PhotoType.Wedding]: React.createRef<HTMLAnchorElement>(),
-    };
 
     const [tabValue, setTabValue] = React.useState(type !== undefined ? Number(type) : PhotoType.EightYear);
 
@@ -22,9 +18,17 @@ const Photo: React.FunctionComponent = () => {
     };
 
     React.useEffect(() => {
-        setTimeout(() => {
-            tabRef[tabValue as PhotoType].current?.scrollIntoView();
-        });
+        let id = "EightYear";
+        if (tabValue === PhotoType.Wedding) {
+            id = "Wedding";
+        }       
+        scroller.scrollTo(
+            id,  
+            {
+                smooth: true,
+                block: "start",
+            }
+        )
     }, [tabValue]);
 
     const renderImageList = (items: any[]) => {
@@ -58,8 +62,8 @@ const Photo: React.FunctionComponent = () => {
                 indicatorColor="secondary"
                 centered
             >
-                <Tab ref={tabRef[PhotoType.EightYear]} href={`#${PhotoType.EightYear}`} value={PhotoType.EightYear} label="Hành Trình 8 Năm" />
-                <Tab ref={tabRef[PhotoType.Wedding]} href={`#${PhotoType.Wedding}`}value={PhotoType.Wedding} label="Hình Cưới" />
+                <Tab id={"EightYear"} href={`#${PhotoType.EightYear}`} value={PhotoType.EightYear} label="Hành Trình 8 Năm" />
+                <Tab id={"Wedding"} href={`#${PhotoType.Wedding}`} value={PhotoType.Wedding} label="Hình Cưới" />
             </Tabs>
             <TabPanel value={tabValue} index={0}>
                 {renderEightYearJourneyImages()}

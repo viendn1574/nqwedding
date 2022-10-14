@@ -4,20 +4,11 @@ import './header.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { scroller } from "react-scroll";
 
 export class WeddingHeader extends React.Component {
-    private navLinkRef
-
     constructor(props: any) {
         super(props);
-        this.navLinkRef = {
-            home: React.createRef<HTMLAnchorElement>(),
-            couple: React.createRef<HTMLAnchorElement>(),
-            story: React.createRef<HTMLAnchorElement>(),
-            prepair: React.createRef<HTMLAnchorElement>(),
-            photos: React.createRef<HTMLAnchorElement>(),
-            venues: React.createRef<HTMLAnchorElement>(),
-        }
     }
 
     state = {
@@ -48,10 +39,14 @@ export class WeddingHeader extends React.Component {
         }
     }
 
-    scrollTo(ref: React.RefObject<HTMLAnchorElement>) {
-        setTimeout(() => {
-            ref.current?.scrollIntoView();
-        });
+    scrollTo(id: string) {
+        scroller.scrollTo(
+            id,  
+            {
+                smooth: true,
+                block: "start",
+            }
+        )
     }
     
     render(): React.ReactNode {
@@ -61,7 +56,6 @@ export class WeddingHeader extends React.Component {
         }
         return (
             <header>
-                <span>TESTTTTTTTTTTTTTTTTTT2222222</span>
                 <div className='position-absolute w-100'>
                 <Navbar bg="transparent" expand="lg" variant="dark">
                 <Container>
@@ -78,11 +72,11 @@ export class WeddingHeader extends React.Component {
                     <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="container mx-auto mb-2 mb-lg-0">
                         <Nav.Link className='header__menu-link' href="/">Home</Nav.Link>
-                        <Nav.Link className='header__menu-link' onClick={(e) => this.scrollTo(this.navLinkRef.couple)} ref={this.navLinkRef.couple} href="/#couple">TỤI MÌNH</Nav.Link>
-                        <Nav.Link className='header__menu-link' onClick={(e) => this.scrollTo(this.navLinkRef.story)} ref={this.navLinkRef.story} href="/#story">CÂU CHUYỆN</Nav.Link>
-                        <Nav.Link className='header__menu-link' onClick={(e) => this.scrollTo(this.navLinkRef.prepair)} ref={this.navLinkRef.prepair} href="/#repair">CHUẨN BỊ</Nav.Link>
-                        <Nav.Link className='header__menu-link' onClick={(e) => this.scrollTo(this.navLinkRef.photos)} ref={this.navLinkRef.photos} href="/#photos">HÌNH TỤI MÌNH</Nav.Link>
-                        <Nav.Link className='header__menu-link' onClick={(e) => this.scrollTo(this.navLinkRef.venues)} ref={this.navLinkRef.venues} href="/#venues">ĐỊA ĐIỂM</Nav.Link>
+                        <Nav.Link className='header__menu-link' onClick={() => this.scrollTo("couple")} href="/#couple">TỤI MÌNH</Nav.Link>
+                        <Nav.Link className='header__menu-link' onClick={() => this.scrollTo("story")} href="/#story">CÂU CHUYỆN</Nav.Link>
+                        <Nav.Link className='header__menu-link' onClick={() => this.scrollTo("repair")} href="/#repair">CHUẨN BỊ</Nav.Link>
+                        <Nav.Link className='header__menu-link' onClick={() => this.scrollTo("photos")} href="/#photos">HÌNH TỤI MÌNH</Nav.Link>
+                        <Nav.Link className='header__menu-link' onClick={() => this.scrollTo("venues")} href="/#venues">ĐỊA ĐIỂM</Nav.Link>
                      </Nav>
                     </Navbar.Collapse>
                 </Container>
