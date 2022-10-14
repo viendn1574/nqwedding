@@ -22,13 +22,15 @@ const Photo: React.FunctionComponent = () => {
         if (tabValue === PhotoType.Wedding) {
             id = "Wedding";
         }       
-        scroller.scrollTo(
-            id,  
-            {
-                smooth: true,
-                block: "start",
-            }
-        )
+        setTimeout(() => {
+            scroller.scrollTo(
+                id,  
+                {
+                    smooth: true,
+                    block: "start",
+                }
+            )
+        }, 1000);
     }, [tabValue]);
 
     const renderImageList = (items: any[]) => {
