@@ -10,6 +10,8 @@ import PhotoPage from './pages/PhotoPage';
 import smoothscroll from 'smoothscroll-polyfill';
 
 smoothscroll.polyfill();
+//@ts-ignore
+window.__forceSmoothScrollPolyfill__ = true;
 
 const router = createBrowserRouter([
   {
