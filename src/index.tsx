@@ -7,6 +7,9 @@ import {
 } from "react-router-dom";
 import HomePage from './pages/HomePage';
 import PhotoPage from './pages/PhotoPage';
+import smoothscroll from 'smoothscroll-polyfill';
+
+smoothscroll.polyfill();
 
 const router = createBrowserRouter([
   {
