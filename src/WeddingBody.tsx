@@ -10,6 +10,7 @@ import Gallery from './component/gallery/gallery';
 import GridGallery from './component/gallery/gridGallery';
 import { Button, CardMedia } from '@mui/material';
 import { PhotoType } from './component/gallery/Photo';
+import { scroller } from "react-scroll";
 
 function SampleNextArrow(props: any) {
     const { onClick } = props;
@@ -53,6 +54,21 @@ export class WeddingBody extends React.Component {
         slidesToScroll: 1,
     };
 
+    componentDidMount() {
+        const urlParts = window.location.href.split('/');
+        let sectionId = urlParts[urlParts.length - 1];
+        if (sectionId === "") {
+            return;
+        }
+        sectionId = sectionId.replace("#", "");
+        scroller.scrollTo(
+            sectionId,  
+            {
+                smooth: true,
+                block: "start",
+            }
+        )
+    }
     render(): React.ReactNode {
 
         return (
