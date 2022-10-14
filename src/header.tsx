@@ -50,7 +50,7 @@ export class WeddingHeader extends React.Component {
 
     scrollTo(ref: React.RefObject<HTMLAnchorElement>) {
         setTimeout(() => {
-            ref.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            ref.current?.scrollIntoView();
         });
     }
     
@@ -61,7 +61,7 @@ export class WeddingHeader extends React.Component {
         }
         return (
             <header>
-                <span>TESTTTTTTTTTTTTTTTTTT</span>
+                <span>TESTTTTTTTTTTTTTTTTTT2222222</span>
                 <div className='position-absolute w-100'>
                 <Navbar bg="transparent" expand="lg" variant="dark">
                 <Container>
