@@ -1,13 +1,20 @@
-import { Box, Button } from '@mui/material';
-import { ProGallery } from 'pro-gallery';
-import 'pro-gallery/dist/statics/main.css';
+import { Box, Button, ImageList, ImageListItem } from '@mui/material';
 import { useState } from 'react';
 import ModalImage from '../modalImg/modalImg';
 import { PhotoType } from './Photo';
-import { items } from './Photo.constants';
+import { itemData, weddingPhotos } from './Photo.constants';
 
 interface GalleryProps {
 	type: PhotoType;
+}
+
+function srcset(image: string, size: number, rows = 1, cols = 1) {
+	return {
+		src: `${image}?w=${size * cols}&h=${size * rows}&fit=cover&auto=format`,
+		srcSet: `${image}?w=${size * cols}&h=${
+		size * rows
+		}&fit=cover&auto=format&dpr=2 2x`,
+	};
 }
 
 export default function Gallery(props: GalleryProps) {
@@ -15,33 +22,15 @@ export default function Gallery(props: GalleryProps) {
 	const [imgUrl, setimgUrl] = useState('');
 	const [titleImg, setTitleImg] = useState('');
 	const [showFancy, setShowFancy] = useState(false);
+	const { innerWidth: width } = window;
 
 	const { type } = props;
-
-	// The options of the gallery (from the playground current state)
-	const options = {
-		galleryLayout: -1,
-	};
-
-	// The size of the gallery container. The images will fit themselves in it
-	const container = {
-		width: window.innerWidth,
-		height: 500,
-	};
-
-	// The eventsListener will notify you anytime something has happened in the gallery.
-	const eventsListener = (eventName: any, eventData: any) => {
-		if (eventName === 'ITEM_ACTION_TRIGGERED' || eventName === 'ITEM_CLICKED') {
-			setShowFancy(true);
-			setimgUrl(eventData.url);
-			setTitleImg(eventData.title)
-		}
+	const setImg = (e: any) => {
+		setimgUrl(e.target.currentSrc);
+		setTitleImg(e.target.alt);
+		setShowFancy(true);
 	}
-
-
-	// The scrollingElement is usually the window, if you are scrolling inside another element, suplly it here
-	const scrollingElement = window;
-
+	const items = type === PhotoType.EightYear ? itemData : weddingPhotos;
 	return (
 		<>
 			<Box sx={{
@@ -49,14 +38,25 @@ export default function Gallery(props: GalleryProps) {
 				display: "flex",
 				flexDirection: "column",
 			}}>
-				{showFancy && <ModalImage urlImg={imgUrl} setShowModal={setShowFancy} title={titleImg} />}
-				<ProGallery
-					items={items.slice(0, 6)} // too many items here will break layout
-					options={options}
-					container={container}
-					eventsListener={eventsListener}
-					scrollingElement={scrollingElement}
-				/>
+				{showFancy && <ModalImage type='image' urlImg={imgUrl} setShowModal={setShowFancy} title={titleImg} />}
+				<ImageList
+					sx={{ width: '100%', height: 'auto', overflowY: 'unset' }}
+					variant="quilted"
+					cols={6}
+					rowHeight={121}
+
+				>
+					{items.map((item) => (
+						<ImageListItem key={item.img} cols={item.cols || 1} rows={item.rows || 1}>
+							<img
+								{...srcset(item.img, 121, item.rows, item.cols)}
+								alt={item.title}
+								loading="lazy"
+								onClick={setImg}
+							/>
+						</ImageListItem>
+					))}
+				</ImageList>
 				<Button
 					sx={{
 						marginTop: "3%"

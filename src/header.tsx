@@ -91,8 +91,8 @@ export class WeddingHeader extends React.Component {
                                 <div className="col-8 border-lg">
                                     <div className="d-flex flex-column justify-content-center align-items-center h-100">
                                         <div className="text-white d-flex flex-column justify-content-center align-items-center">
-                                            <h1 className="header-title">Quang & Nhi</h1>
-                                            <span className="header-subtitle">Vậy là tụi mình cưới nhau <br/> 25.12.2022 <br/> 30.12.2022 </span>                                         
+                                            <h1 className="header-title">Xuân Quang & Hồng Nhi</h1>
+                                            <span className="header-subtitle">25.12.2022 <br/> 30.12.2022 </span>                                         
                                         </div>
                                     </div>
                                 </div>
@@ -103,7 +103,7 @@ export class WeddingHeader extends React.Component {
                     </div>
                 </div>
                 <div className="header__countdown d-flex flex-column justify-content-center align-items-center">
-                    <p className="countdown__title text--colored">Cùng <strong>đếm</strong> ngược nào</p>
+                    <p className="countdown__title text--colored">Vậy là tụi mình cưới nhau</p>
                     <div className="countdown__block countdown">
                         <div className="countdown__element countdown__month border--colored"> 
                             <span className="count month text--colored">{months}</span><br/>

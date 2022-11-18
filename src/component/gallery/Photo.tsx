@@ -2,7 +2,7 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { items } from './Photo.constants';
+import { itemData } from './Photo.constants';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { useParams } from 'react-router-dom';
@@ -12,11 +12,27 @@ const Photo: React.FunctionComponent = () => {
     const { type } = useParams();
 
     const [tabValue, setTabValue] = React.useState(type !== undefined ? Number(type) : PhotoType.EightYear);
+    const weddingPhotos: any = [];
+    const eightYearsPhotos: any = [];
 
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setTabValue(newValue);
     };
 
+    for (let i = 1 ; i <= 135; i++) {
+        weddingPhotos.push({
+            img: `${process.env.PUBLIC_URL}/assets/cuoi/cuoi (${i}).jpg`,
+            title: `Xuan Quang - Hong Nhi`,
+        })
+    }
+        
+    for (let i = 1 ; i <= 41; i++) {
+        eightYearsPhotos.push({
+            img: `${process.env.PUBLIC_URL}/assets/8nam/8nam (${i}).jpg`,
+            title: `Xuan Quang - Hong Nhi`,
+        })
+    }
+    
     React.useEffect(() => {
         let id = "EightYear";
         if (tabValue === PhotoType.Wedding) {
@@ -37,10 +53,10 @@ const Photo: React.FunctionComponent = () => {
         return (
             <ImageList variant="masonry" cols={3} gap={8}>
                 {items.map((item) => (
-                    <ImageListItem key={item.itemId} >
+                    <ImageListItem key={item.img} >
                         <img
-                            src={`${item.mediaUrl}?fit=crop&auto=format`}
-                            alt={item.metaData.title}
+                            src={item.img}
+                            alt={item.title}
                             loading="lazy"
                         />
                     </ImageListItem>
@@ -49,9 +65,9 @@ const Photo: React.FunctionComponent = () => {
         );
     }
 
-    const renderEightYearJourneyImages = () => renderImageList(items.slice(0, items.length));
+    const renderEightYearJourneyImages = () => renderImageList(eightYearsPhotos);
 
-    const renderWeddingImages = () => renderImageList(items.slice(0, 3));
+    const renderWeddingImages = () => renderImageList(weddingPhotos);
 
     return (
         <Box sx={{

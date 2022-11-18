@@ -80,12 +80,10 @@ export class WeddingBody extends React.Component {
                         <div className="couple__image couple__image-groom--left border--colored"></div>
                         <div className="couple__text couple__text--right">
                             <div className="couple__text-head text--colored">
-                                <h3 className="couple__title text--colored">Quang</h3>
-                                <span className="couple__subtitle text--colored">the Groom</span>
+                                <h3 className="couple__title text--colored">Xuân Quang</h3>
+                                <span className="couple__subtitle text--colored">Chú Rể</span>
                             </div>
                             <div className="couple__text-body">
-                                <p className="couple__descr">I bumped into Diana again 7 years later in a club, she had literally just returned from a holiday and was out celebrating her birthday. I was back from sea for 4 days before I left again for a few months. The probability that this would happen is crazy and to top it all off, she remembered my name. </p>
-                                <p className="couple__descr">I got this amazing feeling as soon as I saw her and it lives with me every day and I promise that the bunny outfit had nothing to do with it. Needless to say it turned into a very expensive night out</p>
                             </div>
                         </div>
                     </div>
@@ -93,11 +91,9 @@ export class WeddingBody extends React.Component {
                         <div className="couple__image couple__image-bride--right border--colored"></div>
                         <div className="couple__text couple__text--left">
                             <div className="couple__text-head text--colored">
-                            <h3 className="couple__title text--colored">Nhi</h3><span className="couple__subtitle text--colored">the Bride</span>
+                            <h3 className="couple__title text--colored">Hồng Nhi</h3><span className="couple__subtitle text--colored">Cô Dâu</span>
                             </div>
                             <div className="couple__text-body">
-                            <p className="couple__descr">Jeremy and I have absolutely no hobbies or interests in common at all!  I fact, we're pretty much complete opposites! But who needs stuff in common? It's over-rated!  </p>
-                            <p className="couple__descr">More importantly, we have the same life goals, the same priorities, the same attitudes to people and money and work and the same sense of what's right and wrong in life.  We say that we're soul mates and over the last 7 years I feel like we've become adults together and somehow shaped each other into becoming better people.</p>
                             </div>
                         </div>
                     </div>

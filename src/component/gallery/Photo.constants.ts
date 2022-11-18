@@ -1,183 +1,103 @@
 
-const duplicates: any[] = [
-    { // Another Image item:
-        itemId: '8nam6.1',
-        mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
-        metaData: {
-            type: 'image',
-            height: 100,
-            width: 200,
-            title: 'sample-title',
-            description: 'sample-description',
-            focalPoint: [0, 0],
-            link: {
-                url: 'http://example.com',
-                target: '_blank'
-            },
-        }
+export const itemData = [
+    {
+      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_2.JPG',
+      title: 'Xuân Quang - Hồng Nhi',
+      rows: 2,
+      cols: 1,
     },
-    { // Another Image item:
-        itemId: '8nam6.2',
-        mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
-        metaData: {
-            type: 'image',
-            height: 100,
-            width: 200,
-            title: 'sample-title',
-            description: 'sample-description',
-            focalPoint: [0, 0],
-            link: {
-                url: 'http://example.com',
-                target: '_blank'
-            },
-        }
+    {
+      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_4.JPG',
+      title: 'Xuân Quang - Hồng Nhi',
+      rows: 2,
+      cols: 1,
     },
-    { // Another Image item:
-        itemId: '8nam6.3',
-        mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
-        metaData: {
-            type: 'image',
-            height: 100,
-            width: 200,
-            title: 'sample-title',
-            description: 'sample-description',
-            focalPoint: [0, 0],
-            link: {
-                url: 'http://example.com',
-                target: '_blank'
-            },
-        }
+    {
+      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_9.JPG',
+      title: 'Xuân Quang - Hồng Nhi',
+      rows: 3,
+      cols: 1,
     },
-    { // Another Image item:
-        itemId: '8nam6.4',
-        mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
-        metaData: {
-            type: 'image',
-            height: 100,
-            width: 200,
-            title: 'sample-title',
-            description: 'sample-description',
-            focalPoint: [0, 0],
-            link: {
-                url: 'http://example.com',
-                target: '_blank'
-            },
-        }
+    {
+      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_11.JPG',
+      title: 'Xuân Quang - Hồng Nhi',
+      rows: 3,
+      cols: 1,
     },
-    { // Another Image item:
-        itemId: '8nam6.5',
-        mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
-        metaData: {
-            type: 'image',
-            height: 100,
-            width: 200,
-            title: 'sample-title',
-            description: 'sample-description',
-            focalPoint: [0, 0],
-            link: {
-                url: 'http://example.com',
-                target: '_blank'
-            },
-        }
+    {
+      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
+      title: 'Xuân Quang - Hồng Nhi',
+      rows: 3,
+      cols: 2,
     },
+    {
+      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
+      title: 'Xuân Quang - Hồng Nhi',
+      rows: 2,
+      cols: 2,
+    },
+    {
+        img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
+        title: 'Xuân Quang - Hồng Nhi',
+        rows: 1,
+        cols: 2,
+      },
+      {
+        img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
+        title: 'Xuân Quang - Hồng Nhi',
+        rows: 1,
+        cols: 2,
+      }
 ];
 
-export const items = [
-    { // Image item:
-        itemId: '8nam1',
-        mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_2.JPG',
-        metaData: {
-            type: 'image',
-            height: 100,
-            width: 100,
-            title: 'sample-title',
-            description: 'sample-description',
-            focalPoint: [0, 0],
-            link: {
-                url: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_2.JPG',
-                target: '_blank'
-            },
-        }
+export const weddingPhotos = [
+  {
+    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(1).jpg',
+    title: 'Xuân Quang - Hồng Nhi',
+    rows: 2,
+    cols: 1,
+  },
+  {
+    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(2).jpg',
+    title: 'Xuân Quang - Hồng Nhi',
+    rows: 2,
+    cols: 1,
+  },
+  {
+    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(3).jpg',
+    title: 'Xuân Quang - Hồng Nhi',
+    rows: 3,
+    cols: 1,
+  },
+  {
+    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(4).jpg',
+    title: 'Xuân Quang - Hồng Nhi',
+    rows: 3,
+    cols: 1,
+  },
+  {
+    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(5).jpg',
+    title: 'Xuân Quang - Hồng Nhi',
+    rows: 3,
+    cols: 2,
+  },
+  {
+    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(6).JPG',
+    title: 'Xuân Quang - Hồng Nhi',
+    rows: 2,
+    cols: 2,
+  },
+  {
+      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(6).JPG',
+      title: 'Xuân Quang - Hồng Nhi',
+      rows: 1,
+      cols: 2,
     },
-    { // Another Image item:
-        itemId: '8nam2',
-        mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_4.JPG',
-        metaData: {
-            type: 'image',
-            height: 100,
-            width: 100,
-            title: 'sample-title',
-            description: 'sample-description',
-            focalPoint: [0, 0],
-            link: {
-                url: 'http://example.com',
-                target: '_blank'
-            },
-        }
-    },   
-    { // Another Image item:
-        itemId: '8nam3',
-        mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_9.JPG',
-        metaData: {
-            type: 'image',
-            height: 300,
-            width: 200,
-            title: 'sample-title',
-            description: 'sample-description',
-            focalPoint: [0, 0],
-            link: {
-                url: 'http://example.com',
-                target: '_blank'
-            },
-        }
-    },
-    { // Another Image item:
-        itemId: '8nam4',
-        mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_11.JPG',
-        metaData: {
-            type: 'image',
-            height: 300,
-            width: 200,
-            title: 'sample-title',
-            description: 'sample-description',
-            focalPoint: [0, 0],
-            link: {
-                url: 'http://example.com',
-                target: '_blank'
-            },
-        }
-    },
-    { // Another Image item:
-        itemId: '8nam5',
-        mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
-        metaData: {
-            type: 'image',
-            height: 100,
-            width: 200,
-            title: 'sample-title',
-            description: 'sample-description',
-            focalPoint: [0, 0],
-            link: {
-                url: 'http://example.com',
-                target: '_blank'
-            },
-        }
-    },
-    { // Another Image item:
-        itemId: '8nam6',
-        mediaUrl: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_10.JPG',
-        metaData: {
-            type: 'image',
-            height: 100,
-            width: 200,
-            title: 'sample-title',
-            description: 'sample-description',
-            focalPoint: [0, 0],
-            link: {
-                url: 'http://example.com',
-                target: '_blank'
-            },
-        }
-    },
-    ...duplicates,
-]
+    {
+      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(6).JPG',
+      title: 'Xuân Quang - Hồng Nhi',
+      rows: 1,
+      cols: 2,
+    }
+];
+
