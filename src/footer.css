@@ -9,36 +9,27 @@
 }
 
 .footer__content {
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-    -webkit-align-items: center;
-    -ms-flex-align: center;
     align-items: center;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    justify-content: space-evenly;
     position: absolute;
     top: -50%;
     left: 50%;
     -webkit-transform: translate(-50%, 4%);
     -ms-transform: translate(-50%, 4%);
     transform: translate(-50%, 4%);
+    width: 100%;
 }
 
 .footer__name {
     display: block;
     font-family: "Baloo 2";
-    font-size: 56px;
-    line-height: 88px;
+    font-size: 30px;
     color: #7E3117;
     position: relative;
 }
 
-@media only screen and (max-width: 300px)
+@media only screen and (max-width: 400px)
 {
     .footer__name {
         display: none;
@@ -50,18 +41,94 @@
 }
 
 .jeremy {
-    margin-right: 56px;
+    margin-right: -400px;
+    text-align: end;
 }
 
 .diana {
-    margin-left: 56px;
+    margin-left: -400px;
+}
+
+@media only screen and (max-width: 1300px)
+{
+    .footer__name {
+        font-size: 30px;
+    }
+
+    .jeremy {
+        margin-right: -300px;
+    }
+    
+    .diana {
+        margin-left: -300px;
+    }
+    
+}
+
+@media only screen and (max-width: 1100px)
+{
+    .footer__name {
+        font-size: 30px;
+    }
+
+    .jeremy {
+        margin-right: -250px;
+    }
+    
+    .diana {
+        margin-left: -250px;
+    }
+    
+}
+
+@media only screen and (max-width: 1000px)
+{
+    .footer__name {
+        font-size: 30px;
+    }
+
+    .jeremy {
+        margin-right: -200px;
+    }
+    
+    .diana {
+        margin-left: -200px;
+    }
+    
+}
+
+
+
+@media only screen and (max-width: 900px)
+{
+    .footer__name {
+        font-size: 30px;
+    }
+
+    .jeremy {
+        margin-right: -100px;
+    }
+    
+    .diana {
+        margin-left: -100px;
+    }
+    
 }
 
 @media only screen and (max-width: 700px)
 {
     .footer__name {
-        font-size: 35px;
+        font-size: 30px;
     }
+
+    .jeremy {
+        margin-right: -50px;
+    }
+    
+    .diana {
+        margin-left: -50px;
+    }
+    
     
 }
 
@@ -71,11 +138,11 @@
         font-size: 25px;
     }
     .jeremy {
-        margin-right: 25px;
+        margin-right: 5px;
     }
     
     .diana {
-        margin-left: 25px;
+        margin-left: 5px;
     }
     
 }
@@ -87,11 +154,11 @@
         font-size: 18px;
     }
     .jeremy {
-        margin-right: 18px;
+        margin-right: 0px;
     }
     
     .diana {
-        margin-left: 18px;
+        margin-left: 0px;
     }
     
 }
@@ -102,18 +169,18 @@
         font-size: 13px;
     }
     .jeremy {
-        margin-right: 13px;
+        margin-right: 0px;
     }
     
     .diana {
-        margin-left: 13px;
+        margin-left: 0px;
     }
     
 }
 
 
 .footer__image::after {
-    content: "25 /12 /2022";
+    content: "25/12/2022 - 30/12/2022";
     position: absolute;
     bottom: -38px;
     left: 50%;
@@ -121,7 +188,7 @@
     -ms-transform: translateX(-50%);
     transform: translateX(-50%);
     font-family: "Playfair Display", fangsong;
-    font-size: 20px;
+    font-size: 15px;
     line-height: 32px;
     color: #4F3566;
     white-space: nowrap;

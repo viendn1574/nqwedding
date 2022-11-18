@@ -32,7 +32,7 @@
 
 .header-title {
     font-family: 'Baloo 2';
-    font-size: 60px;
+    font-size: 40px;
     line-height: 132px;
     padding-bottom: 16px;
     text-transform: capitalize;
@@ -48,7 +48,7 @@
 
 @media only screen and (max-width: 1000px) {
     .header-title {
-        font-size: 50px;
+        font-size: 30px;
         line-height: 112px;
     }   
 }
@@ -61,14 +61,14 @@
 
 @media only screen and (max-width: 600px) {
     .header-title {
-        font-size: 33px;
+        font-size: 23px;
         line-height: 62px;
     }
 }
 
 @media only screen and (max-width: 350px) {
     .header-title {
-        font-size: 25px;
+        font-size: 15px;
         line-height: 52px;
     }
 }
