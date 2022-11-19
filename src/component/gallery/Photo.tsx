@@ -46,12 +46,12 @@ const Photo: React.FunctionComponent = () => {
                     block: "start",
                 }
             )
-        }, 1000);
+        }, 100);
     }, [tabValue]);
 
     const renderImageList = (items: any[]) => {
         return (
-            <ImageList variant="masonry" cols={3} gap={8}>
+            <ImageList variant="woven" cols={3} gap={8}>
                 {items.map((item) => (
                     <ImageListItem key={item.img} >
                         <img
