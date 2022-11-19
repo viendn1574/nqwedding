@@ -21,7 +21,7 @@ const Photo: React.FunctionComponent = () => {
 
     for (let i = 1 ; i <= 135; i++) {
         weddingPhotos.push({
-            img: `https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi/cuoi+(${i}).JPG`,
+            img: `https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi/cuoi+(${i}).jpg`,
             title: `Xuan Quang - Hong Nhi`,
         })
     }
