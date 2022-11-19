@@ -82,19 +82,19 @@ export const weddingPhotos = [
     cols: 2,
   },
   {
-    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(6).JPG',
+    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(6).jpg',
     title: 'Xuân Quang - Hồng Nhi',
     rows: 2,
     cols: 2,
   },
   {
-      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(6).JPG',
+      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(6).jpg',
       title: 'Xuân Quang - Hồng Nhi',
       rows: 1,
       cols: 2,
     },
     {
-      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(6).JPG',
+      img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi6+(6).jpg',
       title: 'Xuân Quang - Hồng Nhi',
       rows: 1,
       cols: 2,
