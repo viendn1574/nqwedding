@@ -2,7 +2,7 @@ import { Box, Button, ImageList, ImageListItem } from '@mui/material';
 import { useState } from 'react';
 import ModalImage from '../modalImg/modalImg';
 import { PhotoType } from './Photo';
-import { itemData, weddingPhotos } from './Photo.constants';
+import { itemData, weddingPhotos, weddingTPPhotos } from './Photo.constants';
 
 interface GalleryProps {
 	type: PhotoType;
@@ -30,7 +30,7 @@ export default function Gallery(props: GalleryProps) {
 		setTitleImg(e.target.alt);
 		setShowFancy(true);
 	}
-	const items = type === PhotoType.EightYear ? itemData : weddingPhotos;
+	const items = type === PhotoType.EightYear ? itemData : type === PhotoType.Wedding ? weddingPhotos : weddingTPPhotos;
 	return (
 		<>
 			<Box sx={{

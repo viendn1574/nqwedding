@@ -54,17 +54,17 @@ export default function GridGallery() {
 		{ showFancy && <ModalImage type={type} urlImg={imgUrl} setShowModal={setShowFancy} title={titleImg} desc={descImg}/> }
 		<div className="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 justify-content-center">
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='image' title='Thử váy cưới' desc='An và Trúc dắt mình đi thử váy linh tinh. Mình hông chọn vì cái váy này làm mình mập =)) ' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(5).png' onClick={repairCardOnclick}/></div>
+                <RepairCard type='image' title='Thử váy cưới' desc='' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(5).png' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='image' title='May đầm cưới' desc='An và Trúc dắt mình đi thử váy linh tinh. Mình hông chọn vì cái váy này làm mình mập =)) ' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(2).JPG' onClick={repairCardOnclick} /></div>
+                <RepairCard type='image' title='May đầm cưới' desc='' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(2).JPG' onClick={repairCardOnclick} /></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
                 <RepairCard type='image' title={'Chọn vest'} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(3).JPG' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='image' title={'Chọn nhà hàng'} desc={'Chọn nhà hàng'} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(4).JPG' onClick={repairCardOnclick}/></div>
+                <RepairCard type='image' title={'Chọn nhà hàng'} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(4).JPG' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
                 <RepairCard type='image' title={'Thử áo dài'} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(1).jpg' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='video' title={'Thử váy cưới '} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(6).mp4' onClick={repairCardOnclick}/></div>
+                <RepairCard type='video' title={'Gắn hoa làm thiệp '} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(6).mp4' onClick={repairCardOnclick}/></div>
         </div>
         </>
 	);

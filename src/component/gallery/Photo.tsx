@@ -111,6 +111,7 @@ export default Photo;
 export enum PhotoType {
     EightYear,
     Wedding,
+    WeddingTP,
 }
 
 interface TabPanelProps {

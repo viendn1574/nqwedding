@@ -99,75 +99,111 @@ export class WeddingBody extends React.Component {
                     </div>
                 </div>
             </section>
-            <section className="story1" id="story">
-                <div className="container">
-                    <h2 className="s-title text--colored"> Câu Chuyện Tụi Mình</h2>
-                    <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                        <div className="story__slider-image">
-                            <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/img_bienhinh.png' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4'/>
-                        </div>
-                        <div>
-                            <div className="story__slider-text">
-                                < p className="story__slider-descr">Năm 18 tuổi, tụi mình cùng nhau tốt nghiệp học sinh cuối cấp.</p>
-                            </div>
-                            <div className="story__slider-text">
-                                <p className="story__slider-descr">Năm 26 tuổi, tụi mình cùng nhau tốt nghiệp học sinh cuối cấp.</p>
+            <div className="image-dihoc-header">
+                <div className="mask mask2 h-100">
+                    <div className="h-100 d-flex flex-column">
+                        <div className="row row-empty"></div>
+                        <div className="row row-heigh"></div>
+                        <div className="row">
+                            <div className="d-flex flex-column justify-content-center align-items-center h-100">
+                                <div className="text-white d-flex flex-column justify-content-center align-items-center">
+                                    <span className="header-subtitle">Năm 18 tuổi, tụi mình cùng nhau tốt nghiệp học sinh cuối cấp <br/> Năm 26 tuổi, tụi mình cùng nhau tốt nghiệp cuộc sống độc thân </span>                                         
+                                    </div>
                             </div>
                         </div>
+                        <div className="row row-empty"></div>
                     </div>
                 </div>
-            </section>
+            </div>
+            <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/img_bienhinh.png' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4'/>
             <section className="story" id="story">
                 <div className="container">
+                    <h2 className="s-title text--colored"> Câu Chuyện Tụi Mình</h2>
                     <Slider className='story__slider' {...this.settings}>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/gapnhau1.JPG" alt=""/></div>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh1.jpg" alt=""/></div>
                             <div className="story__slider-text">
-                            <div className="slider__head-text text--colored"> 
-                                <h3 className="couple__title text--colored"> 10.08.2012: TỤI MÌNH GẶP NHAU</h3>
-                            </div>
-                            <p className="story__slider-descr">Nhi là học sinh mới chuyển vào lớp, ngày đầu tiên vừa bước vào, mọi người vỗ tay ầm ầm, Nhi ngại nên đã đi thẳng ra ngoài, sau đó 2 năm học chung thì tụi mình rất mờ nhạt trong mắt nhau :)))</p>
+                                <div className="slider__head-text text--colored"> 
+                                    <h3 className="couple__title text--colored"> 2012: TỤI MÌNH GẶP NHAU</h3>
+                                </div>
+                                <p className="story__slider-descr">Nhi là học sinh mới, chuyển vào lớp, ngày đầu tiên bước vào, mọi người vỗ tay ầm ầm, làm con nhỏ ngại đỏ mặt, chạy ra ngoài.</p>
+                                <p className="story__slider-descr">Chắc đó là ấn tượng đầu tiên, sau đó 2 năm học chung thì tụi mình chỉ lướt qua nhau như người lạ.</p>
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/quennhau.JPG" alt=""/></div>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh2.jpeg" alt=""/></div>
+                            <div className="story__slider-text">
+                                <p className="story__slider-descr">Hồi xưa Nhi hơi mập, nên Quang thích chọc “Nhi đô” , con nhỏ mặt thì dòm dữ mà ko hề dữ, quay lại đánh chỉ 1 cái rồi thôi :))))</p>
+                            </div>
+                        </div>
+                        <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh3.jpg" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
-                                <h3 className="couple__title text--colored"> 27.05.2014: TỤI MÌNH QUEN NHAU</h3>
+                                <h3 className="couple__title text--colored"> 27.5.2014: QUEN NHAU</h3>
                             </div>
                             <p className="story__slider-descr">Sau 3 lần Quang hỏi cùng 1 câu hỏi, thì tụi mình quen nhau vậy thôi, đến giờ vẫn không hiểu tại sao :))</p>
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/totnghiep.JPG" alt=""/></div>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh4.jpg" alt=""/></div>
+                            <div className="story__slider-text">
+                            <div className="slider__head-text text--colored"> 
+                                <h3 className="couple__title text--colored"> 2014-2018: CÙNG NHAU HỌC ĐẠI HỌC</h3>
+                            </div>
+                            <p className="story__slider-descr">Tụi mình học 2 trường đại học khác nhau, nhưng may mắn vẫn chung Làng đại học và chung tuyến xe buýt nên là vẫn cứ đi học cùng nhau.</p>
+                            </div>
+                        </div>
+                        <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh5.png" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
                                 <h3 className="couple__title text--colored"> 2019: TỤI MÌNH TỐT NGHIÊP</h3>
                             </div>
-                            <p className="story__slider-descr">Dù tụi mình học 2 trường đại học khác nhau, nhưng may mắn vẫn chung Làng đại học và cùng chung tuyến xe buýt. Sau mấy năm trời chở nhau đi học, chờ nhau ở bến xe thì tụi mình cũng tốt nghiệp.</p>
+                            <p className="story__slider-descr">Rồi cứ vậy chở nhau đi học, chờ nhau ở bến xe buýt. Và cũng tốt nghiệp.</p>
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
                             <div className="story__slider-image">
-                                <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/conhan.JPG' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/conhanvideo.mp4'/>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh6.jpg" alt=""/></div>
                             </div>
                             <div className="story__slider-text">
                                 <div className="slider__head-text text--colored"> 
-                                    <h3 className="couple__title text--colored"> 04.06.2022: TỤI MÌNH CÓ NHẪN</h3>
+                                    <h3 className="couple__title text--colored"> RỒI ĐI LÀM</h3>
                                 </div>
-                                <p className="story__slider-descr">Đây là chiếc nhẫn đầu tiên và bó hoa đầu tiên Nhi được Quang tặng. Đó là hôm 8 năm 8 ngày tụi mình quen nhau, Quang nói số 8 khi nằm ngang là tượng trưng cho vô hạn, vĩnh cữu (add hình infinity dô dùm tui) nên muốn tụi mình cũng được như vậy. Lẽ ra ở tầng 88 sẽ đẹp hơn, nhưng Landmark chỉ có 81 tầng thoi, nên xài tạm tầng 77 vậy
-
-Nhắc lại món quà sinh nhật đầu tiên Nhi được tặng, là 1 cái bồn cầu đồ chơi bằng nhựa, xin nhắc lại là 1 cái bồn cầu thật ạ và lời chúc: “chúc ăn nhiều mau lớn to khỏe như siêu nhân”</p>
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/groom.jpg" alt=""/></div>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh7.jpg" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
-                                <h3 className="couple__title text--colored"> 25.12.2022 - 30.12.2022: TỤI MÌNH ĐÁM CƯỚI NÈ</h3>
+                                <h3 className="couple__title text--colored"> 10.04.2022 : BA MẸ QUA NHÀ</h3>
                             </div>
-                            <p className="story__slider-descr">Không hẹn, không sắp đặt mà nó lại vào một ngày Noel và cuối năm tất bật, mong là mọi người sẽ chúc phúc cho tụi mình thiệt nhiều, dù là có mặt hay không thể đến dự, tụi mình luôn rất trân trọng. Đó cũng sẽ là những kỷ niệm khó quên, và sẽ đi cùng với Quang và Nhi cho đến suốt cuộc đời.
-Vậy là, bọn mình sắp cưới nhau, và sẽ cùng nhau bắt đầu một khởi đầu mới, hạnh phúc bên cạnh nhau!</p>
+                            </div>
+                        </div>
+                        <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh8.JPG" alt=""/></div>
+                            <div className="story__slider-text">
+                            <div className="slider__head-text text--colored"> 
+                                <h3 className="couple__title text--colored"> 04.06.2022: CÓ NHẪN NÈ</h3>
+                            </div>
+                            <p className="story__slider-descr">Đó là hôm 8 năm 8 ngày tụi mình quen nhau, Quang nói số 8 nằm ngang là tượng trưng cho vô hạn ∞ nên muốn tụi mình cũng được như vậy. Lẽ ra ở tầng 88 sẽ đẹp hơn, nhưng Landmark chỉ có 81 tầng thoi :)))</p>
+                            </div>
+                        </div>
+                        <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh9.jpg" alt=""/></div>
+                            <div className="story__slider-text">
+                            <p className="story__slider-descr">Đến tận lúc này mới được tặng bó hoa đầu tiên và chiếc nhẫn đầu tiên.</p>
+                            <p className="story__slider-descr">Nhắc lại món quà sinh nhật đầu tiên Nhi được tặng, là 1 cái bồn cầu đồ chơi bằng nhựa, xin nhắc lại là 1 cái bồn cầu thiệt ạ và lời chúc: “chúc ăn nhiều mau lớn to khỏe như siêu nhân” </p>
+                            </div>
+                        </div>
+                        <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
+                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh10.jpg" alt=""/></div>
+                            <div className="story__slider-text">
+                            <div className="slider__head-text text--colored"> 
+                                <h3 className="couple__title text--colored"> 25.12.2022 - 30.12.2022: TỤI MÌNH CƯỚI</h3>
+                            </div>
+                            <p className="story__slider-descr">Không hẹn, không sắp đặt mà nó lại vào một ngày Noel và cuối năm tất bật, mong là mọi người sẽ chúc phúc cho tụi mình thiệt nhiều, dù là có mặt hay không thể đến dự, tụi mình luôn rất trân trọng. Đó cũng sẽ là những kỷ niệm khó quên, và sẽ đi cùng tụi mình cho đến suốt cuộc đời.</p>
                             </div>
                         </div>
                     </Slider>
@@ -177,6 +213,8 @@ Vậy là, bọn mình sắp cưới nhau, và sẽ cùng nhau bắt đầu mộ
             <section className="repair" id="repair">
                 <div className="container">
                     <h2 className="s-title text--colored"> Chuẩn bị</h2>
+                    <h2 className="repair-subtitle">Cùng xem qua quá trình tụi mình chọn lựa và chuẩn bị cho đám cưới nha! </h2>
+                    <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/img_bienhinh.png' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(6).mp4'/>
                     <div >
                         <GridGallery/>
                     </div>
@@ -191,26 +229,32 @@ Vậy là, bọn mình sắp cưới nhau, và sẽ cùng nhau bắt đầu mộ
                 </div>
             </section>
 
-            <section className="photos" id="photos">
+            <section className="weddingPhotos" id="photos">
                 <div className="container">
                     <h2 className="s-title text--colored"> Hình Cưới Tụi Mình</h2>
-                    <Gallery type={PhotoType.Wedding}/>
+                    <h2 className="repair-subtitle">Ta sẽ yêu nhau đến già yêu đến khi thành ông bà <br/>
+Mình bên nhau, ở bên nhau, cầm tay nhau <br/>
+Mãi thương ❤
+ </h2>
+                    <div style={{paddingBottom:'20px'}}><Gallery type={PhotoType.Wedding}/></div>
+                    <Gallery type={PhotoType.WeddingTP}/>
                 </div>
             </section>
             
             <section className="venues" id="venues">
                 <div className="container">
-                    <h2 className="s-title text--colored"> Địa Điểm</h2>
+                    <h2 className="s-title text--colored">TA CÓ HẸN VỚI THÁNG 12</h2>
+                    <h2 className="repair-subtitle">Hãy mang theo những niềm vui và lời chúc phúc đến tiệc cưới của tụi mình nhé !</h2>
                     <div className="container-sm">
                     <div className="venues__ceremony">
                         <div className="ceremony__card venues__card border--colored">
                         <div className="venues__card-head text--colored"> 
-                            <h3 className="venues__card-title text--colored"> Wedding Ceremony</h3>
+                            <h3 className="venues__card-title text--colored">TIỆC CƯỚI</h3>
                         </div>
                         <div className="venues__card-info">
                             <div className="venues__card-block">
                                 <span className="venues__card-label mrg">Vào lúc</span>
-                                <span className="venue__card-data">17:30, Ngày 5 tháng 12, 2022</span>
+                                <span className="venue__card-data">17:30, Ngày 25 tháng 12, 2022</span>
                             </div>
                             <div className="venues__card-block">
                                 <span className="venues__card-label">Tại</span>
@@ -235,7 +279,7 @@ Vậy là, bọn mình sắp cưới nhau, và sẽ cùng nhau bắt đầu mộ
                     <div className="venues__ceremony">
                         <div className="ceremony__card venues__card border--colored">
                         <div className="venues__card-head text--colored"> 
-                            <h3 className="venues__card-title text--colored"> Wedding Ceremony</h3>
+                            <h3 className="venues__card-title text--colored">TIỆC CƯỚI</h3>
                         </div>
                         <div className="venues__card-info">
                             <div className="venues__card-block">
