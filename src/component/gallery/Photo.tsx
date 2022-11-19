@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
@@ -7,10 +7,13 @@ import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { useParams } from 'react-router-dom';
 import { scroller } from 'react-scroll';
+import ModalImage from '../modalImg/modalImg';
 
 const Photo: React.FunctionComponent = () => {
     const { type } = useParams();
-
+    const [imgUrl, setimgUrl] = useState('');
+	const [titleImg, setTitleImg] = useState('');
+	const [showFancy, setShowFancy] = useState(false);
     const [tabValue, setTabValue] = React.useState(type !== undefined ? Number(type) : PhotoType.EightYear);
     const weddingPhotos: any = [];
     const eightYearsPhotos: any = [];
@@ -18,6 +21,12 @@ const Photo: React.FunctionComponent = () => {
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setTabValue(newValue);
     };
+
+    const setImg = (e: any) => {
+		setimgUrl(e.target.currentSrc);
+		setTitleImg(e.target.alt);
+		setShowFancy(true);
+	}
 
     for (let i = 1 ; i <= 135; i++) {
         weddingPhotos.push({
@@ -28,7 +37,7 @@ const Photo: React.FunctionComponent = () => {
         
     for (let i = 1 ; i <= 41; i++) {
         eightYearsPhotos.push({
-            img: `${process.env.PUBLIC_URL}/assets/8nam/8nam (${i}).jpg`,
+            img: `https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam/8nam+(${i}).jpg`,
             title: `Xuan Quang - Hong Nhi`,
         })
     }
@@ -58,6 +67,7 @@ const Photo: React.FunctionComponent = () => {
                             src={item.img}
                             alt={item.title}
                             loading="lazy"
+                            onClick={setImg}
                         />
                     </ImageListItem>
                 ))}
@@ -70,6 +80,8 @@ const Photo: React.FunctionComponent = () => {
     const renderWeddingImages = () => renderImageList(weddingPhotos);
 
     return (
+        <>
+        {showFancy && <ModalImage type='image' urlImg={imgUrl} setShowModal={setShowFancy} title={titleImg} />}
         <Box sx={{
             margin: "10% 5%",
         }}>
@@ -90,6 +102,7 @@ const Photo: React.FunctionComponent = () => {
                 {renderWeddingImages()}
             </TabPanel>
         </Box>
+        </>
     );
 }
 
