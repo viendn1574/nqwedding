@@ -30,7 +30,7 @@ const Photo: React.FunctionComponent = () => {
         if (url.indexOf('cuoi_ava') != -1) {
 			url = url.replace('cuoi_ava', 'cuoi');
 		}
-		setimgUrl(e.target.currentSrc);
+		setimgUrl(url);
 		setTitleImg(e.target.alt);
 		setShowFancy(true);
 	}
