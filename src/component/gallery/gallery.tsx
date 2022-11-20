@@ -85,7 +85,9 @@ export default function Gallery(props: GalleryProps) {
 				</ImageList>
 				{enableShowMore && <Button
 					sx={{
-						marginTop: "20px"
+						marginTop: "20px",
+						color: "#7E3117",
+						borderColor: "#7E3117",
 					}}
 					variant='outlined'
 					color='secondary'

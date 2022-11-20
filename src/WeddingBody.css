@@ -2,8 +2,8 @@
 @import url('https://fonts.googleapis.com/css?family=Marcellus');
 
 .s-title {
-    font-family: 'Baloo 2';
-    font-size: 56px;
+    font-family: 'Marcellus';
+    font-size: 46px;
     line-height: 70px;
     text-align: center;
     text-transform: capitalize;
@@ -13,7 +13,7 @@
 @media only screen and (max-width: 600px)
 {
     .s-title {
-        font-size: 35px;
+        font-size: 30px;
         line-height: 50px;
     }
 }
@@ -21,7 +21,7 @@
 @media only screen and (max-width: 400px)
 {
     .s-title {
-        font-size: 30px;
+        font-size: 25px;
         line-height: 50px;
     }
 }
@@ -29,7 +29,7 @@
 @media only screen and (max-width: 300px)
 {
     .s-title {
-        font-size: 25px;
+        font-size: 20px;
         line-height: 50px;
     }
 }
@@ -125,7 +125,7 @@
 }
 
 .couple__title {
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-weight: 700;
     font-size: 32px;
     line-height: 44px;
@@ -134,7 +134,7 @@
 }
 
 .couple__subtitle {
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-size: 24px;
     line-height: 36px;
     color: #7E3117;
@@ -158,7 +158,7 @@
 }
 
 .couple__descr {
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -249,8 +249,8 @@
     background-color: rgba(0, 0, 0, 0.3);
 }
 
-.header-subtitle {
-    font-family: 'Baloo 2';
+.header-subtitle-body {
+    font-family: 'Marcellus';
     font-weight: 200;
     font-size: 20px;
     line-height: 32px;
@@ -259,7 +259,7 @@
 }
 @media only screen and (max-width: 900px)
 {
-    .header-subtitle {
+    .header-subtitle-body {
         font-size: 15px;
     }
 }
@@ -267,14 +267,14 @@
 
 @media only screen and (max-width: 600px)
 {
-    .header-subtitle {
+    .header-subtitle-body {
         font-size: 13px;
     }
 }
 
 @media only screen and (max-width: 350px)
 {
-    .header-subtitle {
+    .header-subtitle-body {
         font-size: 10px;
     }
 }
@@ -408,7 +408,7 @@
 }
 
 .story__slider-descr {
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -662,7 +662,7 @@
 }
 
 .venues__card-label {
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
@@ -671,7 +671,7 @@
 }
 
 .venue__card-data {
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
@@ -686,7 +686,7 @@
     -webkit-transition: all .2s ease-out;
     -o-transition: all .2s ease-out;
     transition: all .2s ease-out;
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -725,7 +725,7 @@
 }
 
 .venues__card-title {
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-weight: 700;
     font-size: 32px;
     line-height: 44px;
@@ -757,7 +757,7 @@
 }
 
 .venues__card-link {
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
@@ -771,7 +771,7 @@
 
 .repair-subtitle {
     padding-bottom: 20px;
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-weight: 200;
     font-size: 20px;
     line-height: 30px;
@@ -782,7 +782,7 @@
 {
     .repair-subtitle {
         padding-bottom: 20px;
-        font-family: 'Baloo 2';
+        font-family: 'Marcellus';
         font-weight: 200;
         font-size: 15px;
         line-height: 30px;
@@ -795,7 +795,7 @@
 {
     .repair-subtitle {
         padding-bottom: 20px;
-        font-family: 'Baloo 2';
+        font-family: 'Marcellus';
         font-weight: 200;
         font-size: 13px;
         line-height: 30px;
@@ -815,7 +815,7 @@
 }
 
 .repair_card_title {
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-weight: 400;
     font-size: 20px;
     line-height: 24px;
@@ -824,7 +824,7 @@
 }
 
 .repair_card_desc {
-    font-family: 'Baloo 2';
+    font-family: 'Marcellus';
     font-weight: 400;
     font-size: 14px;
     line-height: 24px;

@@ -75,7 +75,7 @@ export class WeddingBody extends React.Component {
             <>
             <section className="couple" id="couple">
                 <div className="container">
-                    <h2 className="s-title text--colored">Tụi Mình</h2>
+                    <h2 className="s-title text--colored">TỤI MÌNH</h2>
                     <div className="couple__groom">
                         <div className="couple__image couple__image-groom--left border--colored"></div>
                         <div className="couple__text couple__text--right">
@@ -108,7 +108,7 @@ export class WeddingBody extends React.Component {
                         <div className="row">
                             <div className="d-flex flex-column justify-content-center align-items-center h-100">
                                 <div className="text-white d-flex flex-column justify-content-center align-items-center">
-                                    <span className="header-subtitle">Năm 18 tuổi, tụi mình cùng nhau tốt nghiệp học sinh cuối cấp <br/> Năm 26 tuổi, tụi mình cùng nhau tốt nghiệp cuộc sống độc thân </span>                                         
+                                    <span className="header-subtitle-body">Năm 18 tuổi, tụi mình cùng nhau tốt nghiệp học sinh cuối cấp <br/> Năm 26 tuổi, tụi mình cùng nhau tốt nghiệp cuộc sống độc thân </span>                                         
                                     </div>
                             </div>
                         </div>
@@ -120,7 +120,7 @@ export class WeddingBody extends React.Component {
             <section className="story" id="story">
                 <CardMedia width="100%" height="440" style={{paddingTop:'100px', paddingBottom:'0px'}} playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/img_bienhinh.png' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4'/>
                 <div className="container">
-                    <h2 className="s-title text--colored"> Câu Chuyện Tụi Mình</h2>
+                    <h2 className="s-title text--colored"> CÂU CHUYỆN CỦA TỤI MÌNH</h2>
                     <Slider className='story__slider' {...this.settings}>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
                             <div className="story__slider-image"><img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh1.jpg" alt=""/></div>
@@ -212,7 +212,7 @@ export class WeddingBody extends React.Component {
 
             <section className="repair" id="repair">
                 <div className="container">
-                    <h2 className="s-title text--colored"> Chuẩn bị</h2>
+                    <h2 className="s-title text--colored"> CHUẨN BỊ</h2>
                     <h2 className="repair-subtitle">Cùng xem qua quá trình tụi mình chọn lựa và chuẩn bị cho đám cưới nha! </h2>
                     <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/thuvaycuoi.jpg' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(6).mp4'/>
                     <div >
@@ -224,11 +224,11 @@ export class WeddingBody extends React.Component {
 
             <section className="photos" id="photos">
                 <div className="container" >
-                    <h2 className="s-title text--colored" style={{paddingBottom:'50px'}}> Hành Trình 8 Năm Của Tụi Mình</h2>
+                    <h2 className="s-title text--colored" style={{paddingBottom:'50px'}}> HÀNH TRÌNH 8 NĂM CỦA TỤI MÌNH</h2>
                     <Gallery enableShowMore type={PhotoType.EightYear}/>
                 </div>
                 <div className="container" style={{padding: '100px 0px 20px 0px'}}>
-                    <h2 className="s-title text--colored"> Hình Cưới Tụi Mình</h2>
+                    <h2 className="s-title text--colored"> HÌNH CƯỚI CỦA TỤI MÌNH</h2>
                     <h2 className="repair-subtitle">Ta sẽ yêu nhau đến già yêu đến khi thành ông bà <br/>
 Mình bên nhau, ở bên nhau, cầm tay nhau <br/>
 Mãi thương ❤
@@ -240,7 +240,7 @@ Mãi thương ❤
             
             <section className="venues" id="venues">
                 <div className="container">
-                    <h2 className="s-title text--colored">Ta Có Hẹn Với Tháng 12</h2>
+                    <h2 className="s-title text--colored">TA CÓ HẸN VỚI THÁNG 12 </h2>
                     <h2 className="repair-subtitle">Hãy mang theo những niềm vui và lời chúc phúc đến tiệc cưới của tụi mình nhé !</h2>
                     <div className="container-sm" style={{paddingTop: '30px'}}>
                     <div className="venues__ceremony">
