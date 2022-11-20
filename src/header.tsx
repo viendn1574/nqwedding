@@ -12,7 +12,6 @@ export class WeddingHeader extends React.Component {
     }
 
     state = {
-        months: undefined,
         days: undefined,
         hours: undefined,
         minutes: undefined,
@@ -25,12 +24,11 @@ export class WeddingHeader extends React.Component {
             const then = moment("25122022180000", "DDMMYYYYhhmmss");
             const now = moment();
             const countdown = moment(then.valueOf() - now.valueOf());
-            const months = countdown.format('MM');
-            const days = countdown.format('DD');
+            const days = countdown.format('DDD');
             const hours = countdown.format('HH');
             const minutes = countdown.format('mm');
             const seconds = countdown.format('ss');
-            this.setState({ months, days, hours, minutes, seconds });
+            this.setState({ days, hours, minutes, seconds });
         }, 1000);
     }
     componentWillUnmount() {
@@ -50,7 +48,7 @@ export class WeddingHeader extends React.Component {
     }
     
     render(): React.ReactNode {
-        const { months, days, hours, minutes, seconds } = this.state;
+        const { days, hours, minutes, seconds } = this.state;
         if (!seconds) {
             return null;
         }
@@ -105,10 +103,6 @@ export class WeddingHeader extends React.Component {
                 <div className="header__countdown d-flex flex-column justify-content-center align-items-center">
                     <p className="countdown__title text--colored">Vậy là tụi mình cưới nhau</p>
                     <div className="countdown__block countdown">
-                        <div className="countdown__element countdown__month border--colored"> 
-                            <span className="count month text--colored">{months}</span><br/>
-                            <span className="label month_ref text--colored">Tháng</span>
-                        </div>
                         <div className="countdown__element countdown__days border--colored"> 
                             <span className="count days text--colored">{days}</span><br/>
                             <span className="label days_ref text--colored">Ngày</span></div>
