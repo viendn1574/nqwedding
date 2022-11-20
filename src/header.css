@@ -83,9 +83,43 @@
 .header-subtitle {
     font-family: 'Italianno';
     font-weight: 200;
-    font-size: 42px;
+    font-size: 35px;
     line-height: 32px;
     text-transform: capitalize;
+}
+
+@media only screen and (max-width: 1100px) {
+    .header-subtitle {
+        font-size: 30px;
+        line-height: 30px;
+    }   
+}
+
+@media only screen and (max-width: 1000px) {
+    .header-subtitle {
+        font-size: 25px;
+        line-height: 28px;
+    }   
+}
+@media only screen and (max-width: 800px) {
+    .header-subtitle {
+        font-size: 20px;
+        line-height: 25px;
+    }   
+}
+
+@media only screen and (max-width: 600px) {
+    .header-subtitle {
+        font-size: 18px;
+        line-height: 25px;
+    }   
+}
+
+@media only screen and (max-width: 350px) {
+    .header-subtitle {
+        font-size: 15px;
+        line-height: 25px;
+    }   
 }
 
 @media (min-width: 700px) { 
