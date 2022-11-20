@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { itemData } from './Photo.constants';
+import { eightYearsPhotosSmall } from './Photo.constants';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { useParams } from 'react-router-dom';
@@ -17,12 +17,19 @@ const Photo: React.FunctionComponent = () => {
     const [tabValue, setTabValue] = React.useState(type !== undefined ? Number(type) : PhotoType.EightYear);
     const weddingPhotos: any = [];
     const eightYearsPhotos: any = [];
-
+    const { innerWidth: width } = window;
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setTabValue(newValue);
     };
 
     const setImg = (e: any) => {
+        let url:string = e.target.currentSrc;
+		if (url.indexOf('8nam_showmore_ava') != -1) {
+			url = url.replace('8nam_showmore_ava', '8nam_showmore');
+		}
+        if (url.indexOf('cuoi_ava') != -1) {
+			url = url.replace('cuoi_ava', 'cuoi');
+		}
 		setimgUrl(e.target.currentSrc);
 		setTitleImg(e.target.alt);
 		setShowFancy(true);
@@ -30,14 +37,14 @@ const Photo: React.FunctionComponent = () => {
 
     for (let i = 1 ; i <= 135; i++) {
         weddingPhotos.push({
-            img: `https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi/cuoi+(${i}).jpg`,
+            img: `https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoi_ava/cuoi${i}.jpg`,
             title: `Xuan Quang - Hong Nhi`,
         })
     }
         
     for (let i = 1 ; i <= 41; i++) {
         eightYearsPhotos.push({
-            img: `https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam/8nam+(${i}).jpg`,
+            img: `https://nqwedding.s3.ap-southeast-1.amazonaws.com/8nam_showmore_ava/8nam${i}.jpg`,
             title: `Xuan Quang - Hong Nhi`,
         })
     }
@@ -60,7 +67,7 @@ const Photo: React.FunctionComponent = () => {
 
     const renderImageList = (items: any[]) => {
         return (
-            <ImageList variant="masonry" cols={3} gap={8}>
+            <ImageList variant="masonry" cols={width < 600 ? 3 : 6} gap={8}>
                 {items.map((item) => (
                     <ImageListItem key={item.img} >
                         <img

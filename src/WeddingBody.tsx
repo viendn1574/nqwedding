@@ -91,7 +91,8 @@ export class WeddingBody extends React.Component {
                         <div className="couple__image couple__image-bride--right border--colored"></div>
                         <div className="couple__text couple__text--left">
                             <div className="couple__text-head text--colored">
-                            <h3 className="couple__title text--colored">Hồng Nhi</h3><span className="couple__subtitle text--colored">Cô Dâu</span>
+                                <h3 className="couple__title text--colored">Hồng Nhi</h3>
+                                <span className="couple__subtitle text--colored">Cô Dâu</span>
                             </div>
                             <div className="couple__text-body">
                             </div>
@@ -99,9 +100,9 @@ export class WeddingBody extends React.Component {
                     </div>
                 </div>
             </section>
-            <div className="image-dihoc-header">
+            <div className="image-dihoc-header" >
                 <div className="mask mask2 h-100">
-                    <div className="h-100 d-flex flex-column">
+                    <div className="h-100 d-flex flex-column" style={{width:'93%'}}>
                         <div className="row row-empty"></div>
                         <div className="row row-heigh"></div>
                         <div className="row">
@@ -115,13 +116,14 @@ export class WeddingBody extends React.Component {
                     </div>
                 </div>
             </div>
-            <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/img_bienhinh.png' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4'/>
+            
             <section className="story" id="story">
+                <CardMedia width="100%" height="440" style={{paddingTop:'100px', paddingBottom:'0px'}} playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/img_bienhinh.png' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/bienhinh.MP4'/>
                 <div className="container">
                     <h2 className="s-title text--colored"> Câu Chuyện Tụi Mình</h2>
                     <Slider className='story__slider' {...this.settings}>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh1.jpg" alt=""/></div>
+                            <div className="story__slider-image"><img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh1.jpg" alt=""/></div>
                             <div className="story__slider-text">
                                 <div className="slider__head-text text--colored"> 
                                     <h3 className="couple__title text--colored"> 2012: TỤI MÌNH GẶP NHAU</h3>
@@ -131,13 +133,13 @@ export class WeddingBody extends React.Component {
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh2.jpeg" alt=""/></div>
+                            <div className="story__slider-image"><img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh2.jpeg" alt=""/></div>
                             <div className="story__slider-text">
                                 <p className="story__slider-descr">Hồi xưa Nhi hơi mập, nên Quang thích chọc “Nhi đô” , con nhỏ mặt thì dòm dữ mà ko hề dữ, quay lại đánh chỉ 1 cái rồi thôi :))))</p>
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh3.jpg" alt=""/></div>
+                            <div className="story__slider-image"><img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh3.jpg" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
                                 <h3 className="couple__title text--colored"> 27.5.2014: QUEN NHAU</h3>
@@ -146,7 +148,7 @@ export class WeddingBody extends React.Component {
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh4.jpg" alt=""/></div>
+                            <div className="story__slider-image"><img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh4.jpg" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
                                 <h3 className="couple__title text--colored"> 2014-2018: CÙNG NHAU HỌC ĐẠI HỌC</h3>
@@ -155,7 +157,7 @@ export class WeddingBody extends React.Component {
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh5.png" alt=""/></div>
+                            <div className="story__slider-image"><img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh5.png" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
                                 <h3 className="couple__title text--colored"> 2019: TỤI MÌNH TỐT NGHIÊP</h3>
@@ -164,9 +166,7 @@ export class WeddingBody extends React.Component {
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image">
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh6.jpg" alt=""/></div>
-                            </div>
+                            <div className="story__slider-image"><img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh6.jpg" alt=""/></div>
                             <div className="story__slider-text">
                                 <div className="slider__head-text text--colored"> 
                                     <h3 className="couple__title text--colored"> RỒI ĐI LÀM</h3>
@@ -174,7 +174,7 @@ export class WeddingBody extends React.Component {
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh7.jpg" alt=""/></div>
+                            <div className="story__slider-image"><img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh7.jpg" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
                                 <h3 className="couple__title text--colored"> 10.04.2022 : BA MẸ QUA NHÀ</h3>
@@ -182,7 +182,7 @@ export class WeddingBody extends React.Component {
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh8.JPG" alt=""/></div>
+                            <div className="story__slider-image"><img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh8.JPG" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
                                 <h3 className="couple__title text--colored"> 04.06.2022: CÓ NHẪN NÈ</h3>
@@ -191,14 +191,14 @@ export class WeddingBody extends React.Component {
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh9.jpg" alt=""/></div>
+                            <div className="story__slider-image"><img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh9.jpg" alt=""/></div>
                             <div className="story__slider-text">
                             <p className="story__slider-descr">Đến tận lúc này mới được tặng bó hoa đầu tiên và chiếc nhẫn đầu tiên.</p>
                             <p className="story__slider-descr">Nhắc lại món quà sinh nhật đầu tiên Nhi được tặng, là 1 cái bồn cầu đồ chơi bằng nhựa, xin nhắc lại là 1 cái bồn cầu thiệt ạ và lời chúc: “chúc ăn nhiều mau lớn to khỏe như siêu nhân” </p>
                             </div>
                         </div>
                         <div className="story__slide" style={{width: '100%', display: 'inline-block'}}>
-                            <div className="story__slider-image"><img className="story__slider-image img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh10.jpg" alt=""/></div>
+                            <div className="story__slider-image"><img className="img-responsive" src="https://nqwedding.s3.ap-southeast-1.amazonaws.com/story/hinh10.jpg" alt=""/></div>
                             <div className="story__slider-text">
                             <div className="slider__head-text text--colored"> 
                                 <h3 className="couple__title text--colored"> 25.12.2022 - 30.12.2022: TỤI MÌNH CƯỚI</h3>
@@ -214,7 +214,7 @@ export class WeddingBody extends React.Component {
                 <div className="container">
                     <h2 className="s-title text--colored"> Chuẩn bị</h2>
                     <h2 className="repair-subtitle">Cùng xem qua quá trình tụi mình chọn lựa và chuẩn bị cho đám cưới nha! </h2>
-                    <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/img_bienhinh.png' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(6).mp4'/>
+                    <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/thuvaycuoi.jpg' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(6).mp4'/>
                     <div >
                         <GridGallery/>
                     </div>
@@ -223,29 +223,26 @@ export class WeddingBody extends React.Component {
             </section>
 
             <section className="photos" id="photos">
-                <div className="container">
-                    <h2 className="s-title text--colored"> Hành Trình 8 Năm Của Tụi Mình</h2>
-                    <Gallery type={PhotoType.EightYear}/>
+                <div className="container" >
+                    <h2 className="s-title text--colored" style={{paddingBottom:'50px'}}> Hành Trình 8 Năm Của Tụi Mình</h2>
+                    <Gallery enableShowMore type={PhotoType.EightYear}/>
                 </div>
-            </section>
-
-            <section className="weddingPhotos" id="photos">
-                <div className="container">
+                <div className="container" style={{padding: '100px 0px 20px 0px'}}>
                     <h2 className="s-title text--colored"> Hình Cưới Tụi Mình</h2>
                     <h2 className="repair-subtitle">Ta sẽ yêu nhau đến già yêu đến khi thành ông bà <br/>
 Mình bên nhau, ở bên nhau, cầm tay nhau <br/>
 Mãi thương ❤
  </h2>
-                    <div style={{paddingBottom:'20px'}}><Gallery type={PhotoType.Wedding}/></div>
-                    <Gallery type={PhotoType.WeddingTP}/>
+                    <div style={{padding: '20px 0px 40px 0px'}}><Gallery enableShowMore={false} type={PhotoType.Wedding}/></div>
+                    <Gallery enableShowMore type={PhotoType.WeddingTP}/>
                 </div>
             </section>
             
             <section className="venues" id="venues">
                 <div className="container">
-                    <h2 className="s-title text--colored">TA CÓ HẸN VỚI THÁNG 12</h2>
+                    <h2 className="s-title text--colored">Ta Có Hẹn Với Tháng 12</h2>
                     <h2 className="repair-subtitle">Hãy mang theo những niềm vui và lời chúc phúc đến tiệc cưới của tụi mình nhé !</h2>
-                    <div className="container-sm">
+                    <div className="container-sm" style={{paddingTop: '30px'}}>
                     <div className="venues__ceremony">
                         <div className="ceremony__card venues__card border--colored">
                         <div className="venues__card-head text--colored"> 

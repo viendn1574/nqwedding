@@ -31,8 +31,8 @@ export default function ModalImage(probs: ModalImgProbs) {
             </Modal.Header>
             <Modal.Body>
                 <div className='d-flex flex-column justify-content-center align-items-center text-center'>
-                    {type === 'image' && <img className="img-responsive" style={{ paddingBottom: '20px'}} src={urlImg} alt=""/>}
-                    {type === 'video' && <video className="img-responsive" style={{ paddingBottom: '20px'}} playsInline autoPlay loop muted controls src={urlImg}/>}
+                    {type === 'image' && <img className="img-responsive" loading='lazy' style={{ paddingBottom: '20px'}} src={urlImg} alt=""/>}
+                    {type === 'video' && <video className="img-responsive" style={{ paddingBottom: '20px'}} playsInline autoPlay loop muted controls preload='none' src={urlImg}/>}
                     <div className='couple__subtitle'>
                         {title}
                     </div>

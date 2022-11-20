@@ -5,14 +5,16 @@ interface RepairCardProns {
     title: string;
     desc: string;
     urlImg: string;
+    urlImgSrc?: string;
     onClick: any;
     type: string;
 }
 function RepairCard(probs: RepairCardProns) {
-    const {title, desc, urlImg, onClick, type} = probs;
+    const {title, desc, urlImg, onClick, type, urlImgSrc} = probs;
+    const imgURL = urlImgSrc === undefined || urlImgSrc === '' || urlImgSrc === null ? urlImg : urlImgSrc;
     return (
 		<>
-            <div className='repair_card d-flex flex-column align-items-center text-center' onClick={()=> {onClick(type, title, desc , urlImg)}}>
+            <div className='repair_card d-flex flex-column align-items-center text-center' onClick={()=> {onClick(type, title, desc , imgURL)}}>
                 {type === 'image' && <img className="repair_card_img" src={urlImg}/>}
                 {type === 'video' && <video className="repair_card_img" playsInline autoPlay loop muted controls src={urlImg}/>}
                 <div className=' repair_card_title d-inline-block text-truncate'>
@@ -54,17 +56,17 @@ export default function GridGallery() {
 		{ showFancy && <ModalImage type={type} urlImg={imgUrl} setShowModal={setShowFancy} title={titleImg} desc={descImg}/> }
 		<div className="row row-cols-lg-3 row-cols-md-3 row-cols-sm-2 justify-content-center">
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='image' title='Thử váy cưới' desc='' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(5).png' onClick={repairCardOnclick}/></div>
+                <RepairCard type='image' title='Thử váy cưới' desc='' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(5).jpg' urlImgSrc='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(5).jpg' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='image' title='May đầm cưới' desc='' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(2).JPG' onClick={repairCardOnclick} /></div>
+                <RepairCard type='image' title='May đầm cưới' desc='' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(2).jpeg' urlImgSrc='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(2).JPG' onClick={repairCardOnclick} /></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='image' title={'Chọn vest'} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(3).JPG' onClick={repairCardOnclick}/></div>
+                <RepairCard type='image' title={'Chọn vest'} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(3).jpeg' urlImgSrc='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(3).JPG' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='image' title={'Chọn nhà hàng'} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(4).JPG' onClick={repairCardOnclick}/></div>
+                <RepairCard type='image' title={'Chọn nhà hàng'} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(4).jpeg' urlImgSrc='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(4).JPG' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='image' title={'Thử áo dài'} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(1).jpg' onClick={repairCardOnclick}/></div>
+                <RepairCard type='image' title={'Thử áo dài'} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(1).jpg' urlImgSrc='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(1).jpg' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='video' title={'Gắn hoa làm thiệp '} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi+(6).mp4' onClick={repairCardOnclick}/></div>
+                <RepairCard type='video' title={'Gắn hoa làm thiệp '} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(6).mp4' onClick={repairCardOnclick}/></div>
         </div>
         </>
 	);
