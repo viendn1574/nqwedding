@@ -59,7 +59,7 @@ export default function GridGallery() {
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
                 <RepairCard type='image' title='Thử váy cưới' desc='' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(5).jpg' urlImgSrc='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(5).jpg' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='image' title='May đầm cưới' desc='' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(2).jpeg' urlImgSrc='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(2).JPG' onClick={repairCardOnclick} /></div>
+                <RepairCard type='image' title='May đầm cưới' desc='' urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(2).jpg' urlImgSrc='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(2).JPG' onClick={repairCardOnclick} /></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
                 <RepairCard type='image' title={'Chọn vest'} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(3).jpeg' urlImgSrc='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(3).JPG' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">

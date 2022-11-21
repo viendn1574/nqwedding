@@ -239,10 +239,34 @@
 }
 
 .image-dihoc-header {
-    background:linear-gradient(rgba(97, 88, 105, 0.35), rgba(97, 88, 105, 0.35)), url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/hinhdihoc.png');
-    height: 540px;
-    background-position: center center;
+    background:linear-gradient(rgba(97, 88, 105, 0.35), rgba(97, 88, 105, 0.35)), url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/dihoc_ngang.jpg');
+    height: 740px;
+    background-position: center top;
     background-size: cover;
+}
+@media only screen and (max-width: 900px) {
+    .image-dihoc-header {
+        height: 540px;
+
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .image-dihoc-header {
+        background:linear-gradient(rgba(97, 88, 105, 0.35), rgba(97, 88, 105, 0.35)), url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/dihoc_doc.jpg');
+        height: 640px;
+        background-position: center center;
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .image-dihoc-header {
+        background:linear-gradient(rgba(97, 88, 105, 0.35), rgba(97, 88, 105, 0.35)), url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/dihoc_doc.jpg');
+        height: 540px;
+        background-position: center center;
+        background-size: cover;
+    }
 }
 
 .mask2 {

@@ -132,6 +132,7 @@ export class WeddingBody extends React.Component {
                     <div className="h-100 d-flex flex-column" style={{width:'93%'}}>
                         <div className="row row-empty"></div>
                         <div className="row row-heigh"></div>
+                        <div className="row row-empty"></div>
                         <div className="row">
                             <div className="d-flex flex-column justify-content-center align-items-center h-100">
                                 <div className="text-white d-flex flex-column justify-content-center align-items-center">
