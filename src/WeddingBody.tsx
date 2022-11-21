@@ -246,7 +246,7 @@ Mãi thương ❤
                     <div className="venues__ceremony">
                         <div className="ceremony__card venues__card border--colored">
                         <div className="venues__card-head text--colored"> 
-                            <h3 className="venues__card-title text--colored">TIỆC CƯỚI</h3>
+                            <h3 className="venues__card-title text--colored">NHÀ GÁI</h3>
                         </div>
                         <div className="venues__card-info">
                             <div className="venues__card-block">
@@ -276,7 +276,7 @@ Mãi thương ❤
                     <div className="venues__ceremony">
                         <div className="ceremony__card venues__card border--colored">
                         <div className="venues__card-head text--colored"> 
-                            <h3 className="venues__card-title text--colored">TIỆC CƯỚI</h3>
+                            <h3 className="venues__card-title text--colored">NHÀ TRAI</h3>
                         </div>
                         <div className="venues__card-info">
                             <div className="venues__card-block">
@@ -285,7 +285,7 @@ Mãi thương ❤
                             </div>
                             <div className="venues__card-block">
                                 <span className="venues__card-label">Tại</span>
-                                <span className="venue__card-data">Sảnh Gloria – Tầng 12, 284 - 286 Vườn Lài, phường Phú Thọ Hòa, quận Tân Phú, TP.HCM</span>
+                                <span className="venue__card-data">ASIANA PLAZA - Sảnh Gloria – Tầng 12, 284 - 286 Vườn Lài, phường Phú Thọ Hòa, quận Tân Phú, TP.HCM</span>
                             </div>
                         </div>
                         <a className="venues__card-link" href="https://www.google.com/maps?ll=10.746948,106.701202&z=16&t=m&hl=en&gl=BG&mapclient=embed&cid=5734142382329396672">See on map</a>

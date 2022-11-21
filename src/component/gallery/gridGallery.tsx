@@ -8,15 +8,16 @@ interface RepairCardProns {
     urlImgSrc?: string;
     onClick: any;
     type: string;
+    posterVideo?: string;
 }
 function RepairCard(probs: RepairCardProns) {
-    const {title, desc, urlImg, onClick, type, urlImgSrc} = probs;
+    const {title, desc, urlImg, onClick, type, urlImgSrc, posterVideo} = probs;
     const imgURL = urlImgSrc === undefined || urlImgSrc === '' || urlImgSrc === null ? urlImg : urlImgSrc;
     return (
 		<>
             <div className='repair_card d-flex flex-column align-items-center text-center' onClick={()=> {onClick(type, title, desc , imgURL)}}>
                 {type === 'image' && <img className="repair_card_img" src={urlImg}/>}
-                {type === 'video' && <video className="repair_card_img" playsInline autoPlay loop muted controls src={urlImg}/>}
+                {type === 'video' && <video className="repair_card_img" playsInline autoPlay loop muted controls src={urlImg} poster={posterVideo ?? ''}/>}
                 <div className=' repair_card_title d-inline-block text-truncate'>
                     {title}
                 </div>
@@ -66,7 +67,7 @@ export default function GridGallery() {
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
                 <RepairCard type='image' title={'Thử áo dài'} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(1).jpg' urlImgSrc='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(1).jpg' onClick={repairCardOnclick}/></div>
             <div className="d-flex justify-content-center col-lg-3 .col-md-3 col">
-                <RepairCard type='video' title={'Gắn hoa làm thiệp '} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(6).mp4' onClick={repairCardOnclick}/></div>
+                <RepairCard type='video' title={'Gắn hoa làm thiệp '} desc={''} urlImg='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(7).mp4' posterVideo='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/chuanbi+(7).jpg' onClick={repairCardOnclick}/></div>
         </div>
         </>
 	);

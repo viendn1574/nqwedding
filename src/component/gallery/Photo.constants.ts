@@ -180,7 +180,7 @@ export const weddingTPPhotos = [
     cols: 3,
   },
   {
-    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoiTP_ava/cuoiTP2.JPG',
+    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/cuoiTP_ava_large/cuoiTP2.JPG',
     title: 'Xuân Quang - Hồng Nhi',
     rows: 3,
     cols: 3,
