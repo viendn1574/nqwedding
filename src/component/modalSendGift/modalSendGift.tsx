@@ -2,15 +2,22 @@
 import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Button } from '@mui/material';
+import { giftList } from './Gift.constant';
 import Modal from 'react-bootstrap/Modal';
 import './modalSendGift.css'
 interface ModalSendGiftProbs {
     setShowModal: any;
 }
 
+const addGift = (name: string, gift: string) => {
+    giftList.push({name, gift});
+}
+
 export default function ModalSendGift(probs: ModalSendGiftProbs) {
 
     const [show, setShow] = useState(true);
+    const [name, setName] = useState('');
+    const [gift, setGift] = useState('');
     const { setShowModal } = probs;  
 
     return (
@@ -25,8 +32,11 @@ export default function ModalSendGift(probs: ModalSendGiftProbs) {
                     <Form.Group className="mb-4" controlId="exampleForm.ControlInput1">
                         <Form.Label className='form-lable-cs'>Tên của bạn</Form.Label>
                         <Form.Control
-                            type="Tên"
+                            maxLength= {50}
                             placeholder="Nguyễn Văn A"
+                            onChange={(value) => {
+                                setName(value.target.value);
+                            }}
                         />
                     </Form.Group>
                     <Form.Group
@@ -34,7 +44,12 @@ export default function ModalSendGift(probs: ModalSendGiftProbs) {
                         controlId="exampleForm.ControlTextarea1"
                     >
                         <Form.Label className='form-lable-cs'>Lời chúc</Form.Label>
-                        <Form.Control as="textarea" rows={3} />
+                        <Form.Control
+                            maxLength= {100}
+                            onChange={(value) => {
+                                setGift(value.target.value);
+                            }}
+                        />
                 </Form.Group>
             </Form>
             </Modal.Body>
@@ -47,10 +62,15 @@ export default function ModalSendGift(probs: ModalSendGiftProbs) {
 						borderColor: "#7E3117",
 					}}
 					variant='outlined'
-					color='secondary' onClick={() => { setShow(false); setShowModal(false) }}>
+					color='secondary' onClick={() => { 
+                        setShow(false); 
+                        setShowModal(false);
+                        addGift(name, gift);
+                    }}
+                >
                     Gửi lời chúc nào !
                 </Button>
-                </Modal.Footer>
+            </Modal.Footer>
         </Modal>
         </div>
     );

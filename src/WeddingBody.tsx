@@ -8,10 +8,11 @@ import "swiper/css/pagination";
 // import required modules
 import Gallery from './component/gallery/gallery';
 import GridGallery from './component/gallery/gridGallery';
-import { Button, CardMedia } from '@mui/material';
+import { Button, CardMedia, Snackbar } from '@mui/material';
 import { PhotoType } from './component/gallery/Photo';
 import { scroller } from "react-scroll";
-import ModalSendGift from './component/modalSendGift/modalImg';
+import ModalSendGift from './component/modalSendGift/modalSendGift';
+import { giftList } from './component/modalSendGift/Gift.constant';
 
 function SampleNextArrow(props: any) {
     const { onClick } = props;
@@ -38,7 +39,8 @@ export class WeddingBody extends React.Component {
     constructor(props: any) {
         super(props);
         this.state = {
-            showSendGift : false
+            showSendGift : false,
+            openSnackBar : false
         };
     
         this.setShowSendGift = this.setShowSendGift.bind(this);
@@ -46,7 +48,10 @@ export class WeddingBody extends React.Component {
 
     state = {
         showSendGift : false,
+        openSnackBar : false
     };
+
+    indexGift = 0;
 
     settings = {
         dots: false,
@@ -62,7 +67,14 @@ export class WeddingBody extends React.Component {
     setShowSendGift(value: boolean) {
         this.setState({showSendGift: value})
     }
+    interval: any = undefined;
     componentDidMount() {
+        this.interval = setInterval(() => {
+            if (this.indexGift === giftList.length) {
+                this.indexGift = 0;
+            }
+            this.setState({ openSnackBar: true });
+        }, 6000);
         const urlParts = window.location.href.split('/');
         let sectionId = urlParts[urlParts.length - 1];
         if (sectionId === "") {
@@ -76,6 +88,13 @@ export class WeddingBody extends React.Component {
                 block: "start",
             }
         )
+    }
+
+    
+    componentWillUnmount() {
+        if (this.interval) {
+            clearInterval(this.interval);
+        }
     }
     render(): React.ReactNode {
         const {showSendGift} = this.state;
@@ -323,6 +342,32 @@ Mãi thương ❤
                     </div>
                 </a>
             </div>
+            { this.state.openSnackBar && <Snackbar
+                autoHideDuration={3000}
+                open={this.state.openSnackBar}
+                ContentProps={{
+                    sx: {
+                        background: "white"
+                    }
+                }}
+                message={
+                    <div className='d-flex flex-column'>
+                        <span style={{
+                            fontFamily: 'Marcellus',
+                            fontSize:'20px',
+                            fontWeight:'200',
+                            color: 'black'
+                        }}> {giftList[this.indexGift].name} </span>
+                        <span style={{
+                                fontFamily: 'Marcellus',
+                                fontSize:'15px',
+                                fontWeight:'100',
+                                color: 'black'
+                        }}> {giftList[this.indexGift].gift} </span>
+                    </div>
+                }
+                onClose={() => {this.setState({openSnackBar: false}); this.indexGift++;}}
+            />}
             </>
         )
     }

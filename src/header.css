@@ -66,20 +66,26 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 400px) {
     .header-title {
-        font-size: 30px;
+        font-size: 35px;
         line-height: 62px;
     }
 }
 
 @media only screen and (max-width: 350px) {
     .header-title {
-        font-size: 20px;
+        font-size: 30px;
         line-height: 52px;
     }
 }
 
+@media only screen and (max-width: 300px) {
+    .header-title {
+        font-size: 25px;
+        line-height: 52px;
+    }
+}
 .header-subtitle {
     font-family: 'Italianno';
     font-weight: 200;
@@ -95,12 +101,7 @@
     }   
 }
 
-@media only screen and (max-width: 1000px) {
-    .header-subtitle {
-        font-size: 25px;
-        line-height: 28px;
-    }   
-}
+
 @media only screen and (max-width: 800px) {
     .header-subtitle {
         font-size: 20px;
@@ -108,20 +109,13 @@
     }   
 }
 
-@media only screen and (max-width: 600px) {
-    .header-subtitle {
-        font-size: 18px;
-        line-height: 25px;
-    }   
-}
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 300px) {
     .header-subtitle {
-        font-size: 15px;
+        font-size: 20px;
         line-height: 25px;
-    }   
+    } 
 }
-
 @media (min-width: 700px) { 
     .border-lg {
         border: 5px solid #dee2e6 !important;

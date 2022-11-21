@@ -1003,3 +1003,9 @@ video::-webkit-media-controls-panel {
     z-index: 600;
     transform: translateY(-4.6rem) translateX(-2.5rem) rotateZ(-1deg) scale(1);
 }
+
+.snackBar-name {
+    color: 'black';
+    font-size: 20px;
+    font-weight: 200;
+}
