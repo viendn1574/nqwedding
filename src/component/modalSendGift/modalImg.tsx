@@ -27,7 +27,6 @@ export default function ModalSendGift(probs: ModalSendGiftProbs) {
                         <Form.Control
                             type="Tên"
                             placeholder="Nguyễn Văn A"
-                            autoFocus
                         />
                     </Form.Group>
                     <Form.Group
