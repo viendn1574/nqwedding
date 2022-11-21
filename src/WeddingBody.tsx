@@ -243,7 +243,7 @@ export class WeddingBody extends React.Component {
                     <h2 className="s-title text--colored"> CHUẨN BỊ</h2>
                     <h2 className="repair-subtitle">Cùng xem qua quá trình tụi mình chọn lựa và chuẩn bị cho đám cưới nha! </h2>
                     <CardMedia width="100%" height="440" playsInline autoPlay loop muted controls component='video' poster='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi_ava/thuvaycuoi.jpg' src='https://nqwedding.s3.ap-southeast-1.amazonaws.com/chuanbi/chuanbi+(6).mp4'/>
-                    <div >
+                    <div style={{paddingTop: '20px'}}>
                         <GridGallery/>
                     </div>
 
