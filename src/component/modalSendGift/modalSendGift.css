@@ -1,0 +1,16 @@
+.modal-content {
+    background:linear-gradient(rgba(97, 88, 105, 0.6), rgba(37, 34, 39, 0.6)), url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/weddingPhotos_ava_large/cuoi6+(6).jpg');
+    background-position: center top;
+    background-size: cover;
+}
+.form-title-cs {
+    font-family: 'Arizonia';
+    color: white;
+    font-size: 30px;
+}
+
+.form-lable-cs {
+    font-family: 'Arizonia';
+    color: white;
+    font-size: 25px;
+}

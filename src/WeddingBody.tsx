@@ -11,6 +11,7 @@ import GridGallery from './component/gallery/gridGallery';
 import { Button, CardMedia } from '@mui/material';
 import { PhotoType } from './component/gallery/Photo';
 import { scroller } from "react-scroll";
+import ModalSendGift from './component/modalSendGift/modalImg';
 
 function SampleNextArrow(props: any) {
     const { onClick } = props;
@@ -34,6 +35,19 @@ function SampleNextArrow(props: any) {
 
 export class WeddingBody extends React.Component {
 
+    constructor(props: any) {
+        super(props);
+        this.state = {
+            showSendGift : false
+        };
+    
+        this.setShowSendGift = this.setShowSendGift.bind(this);
+    }
+
+    state = {
+        showSendGift : false,
+    };
+
     settings = {
         dots: false,
         infinite: true,
@@ -45,15 +59,9 @@ export class WeddingBody extends React.Component {
         nextArrow: <SampleNextArrow />,
         prevArrow: <SamplePrevArrow />
     };
-
-    settings1 = {
-        dots: false,
-        infinite: true,
-        speed: 500,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-    };
-
+    setShowSendGift(value: boolean) {
+        this.setState({showSendGift: value})
+    }
     componentDidMount() {
         const urlParts = window.location.href.split('/');
         let sectionId = urlParts[urlParts.length - 1];
@@ -70,7 +78,7 @@ export class WeddingBody extends React.Component {
         )
     }
     render(): React.ReactNode {
-
+        const {showSendGift} = this.state;
         return (
             <>
             <section className="couple" id="couple">
@@ -299,6 +307,22 @@ Mãi thương ❤
                     </div>
                 </div>
             </section>
+            {showSendGift && <ModalSendGift setShowModal={this.setShowSendGift}/>}
+            <div data-id="donate-fab" id="call-to-donate" style={{bottom: '45px'}} onClick={ ()=> this.setShowSendGift(true)}>
+                <a>
+                    <div className="sticky-btn-wrapper">
+                        <img src="https://static.namtay.vn/assets/img/front.png" alt="" className="sticky-btn-front"/>
+                        <svg width="86" height="97" viewBox="0 0 86 97" fill="none" className="sticky-btn-opener">
+                            <path d="M85 52.445V81.3185C85 82.3228 84.526 83.2357 83.7675 83.893C83.3693 84.2399 82.8763 84.532 82.3454 84.7146L81.9472 84.8424L45.5788 96.1078C43.9291 96.6191 42.1278 96.6191 40.4781 96.1078L4.10971 84.8607L3.6167 84.7146C3.10474 84.532 2.6307 84.2399 2.23251 83.9112C1.47404 83.2357 1 82.3228 1 81.3185V52.445C1 50.1262 2.95305 48.2456 5.36117 48.2456H43H80.6388C83.047 48.2456 85 50.1262 85 52.445Z" fill="#A5072D" stroke="#231F20" strokeMiterlimit="10"></path>
+                        </svg>
+                        <img src="https://static.namtay.vn/assets/img/back.png" alt="" className="sticky-btn-back"/> 
+                        <img src="https://static.namtay.vn/assets/img/button.png" alt="" className="sticky-btn-button"/>
+                        <img src="https://static.namtay.vn/assets/img/money1.png" alt="" className="sticky-btn-money1"/>
+                        <img src="https://static.namtay.vn/assets/img/money2.png" alt="" className="sticky-btn-money2"/>
+                        <img src="https://static.namtay.vn/assets/img/money3.png" alt="" className="sticky-btn-money3"/>
+                    </div>
+                </a>
+            </div>
             </>
         )
     }

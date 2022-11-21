@@ -133,7 +133,7 @@ export const weddingPhotosLarge = [
     cols: 1,
   },
   {
-    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/weddingPhotos_ava_large/cuoi6+(4).jpg',
+    img: 'https://nqwedding.s3.ap-southeast-1.amazonaws.com/weddingPhotos_ava_large/cuoi6+(5).jpg',
     title: 'Xuân Quang - Hồng Nhi',
     rows: 5,
     cols: 2,

@@ -868,3 +868,120 @@ video::-webkit-media-controls-panel {
     overflow: hidden;
 
 }
+
+#call-to-donate {
+    position: fixed;
+    bottom: 0px;
+    right: 0px;
+    transition: bottom 0.5s linear;
+    z-index: 10000;
+}
+
+.sticky-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+    width: 83px;
+    height: 120px;
+    transform: translate(-2rem, -2rem);
+}
+@media only screen and (max-width: 672px) {
+    .sticky-btn-wrapper {
+        transform: translate(-2rem, -2rem) scale(0.7);
+    }
+}
+
+
+.sticky-btn-front {
+    z-index: 900;
+    top: 25px;
+    position: absolute;
+}
+
+.sticky-btn-back {
+    top: 10px;
+    right: 0.5px;
+    z-index: 100;
+    position: absolute;
+    transition: all 0.1s;
+}
+
+.sticky-btn-button {
+    position: absolute;
+    z-index: 10000;
+    transition: all 0.35s linear;
+    pointer-events: none;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 35px;
+}
+
+.sticky-btn-opener {
+    transition: all 0.35s linear;
+    position: absolute;
+    left: -2.5px;
+    top: -45px;
+    z-index: 1000;
+}
+.sticky-btn-front:hover ~ .sticky-btn-opener {
+    z-index: 100;
+    transform: rotateX(180deg) translateY(-0.5rem);
+}
+.sticky-btn-front:hover ~ .sticky-btn-back {
+    transform: translateY(-0.5rem);
+}
+.sticky-btn-front:hover ~ .sticky-btn-button {
+    transform: translateY(0.2rem) translateX(-50%);
+}
+.sticky-btn-money1 {
+    transform: rotateZ(-50deg) scale(0.5);
+    z-index: 200;
+    right: -2.2rem;
+}
+.sticky-btn-money1 {
+    position: absolute;
+    top: 15%;
+    transition: all 0.35s linear;
+}
+
+.sticky-btn-front:hover ~ .sticky-btn-money1 {
+    z-index: 600;
+    transform: translateY(-3rem) translateX(0rem) rotateZ(3deg) scale(1);
+}
+.sticky-btn-money2 {
+    transform: rotateZ(-40deg) scale(0.5);
+    z-index: 300;
+    left: 0;
+}
+
+
+.sticky-btn-money2 {
+    position: absolute;
+    top: 15%;
+    transition: all 0.35s linear;
+}
+
+.sticky-btn-front:hover ~ .sticky-btn-money2 {
+    z-index: 700;
+    transform: translateY(-4rem) translateX(-0.2rem) rotateZ(-3deg) scale(1);
+}
+
+.sticky-btn-money3 {
+    transform: rotateZ(50deg) scale(0.5);
+    z-index: 200;
+    left: 0rem;
+    top: 2.5rem;
+}
+
+.sticky-btn-money3 {
+    position: absolute;
+    top: 15%;
+    transition: all 0.35s linear;
+}
+
+.sticky-btn-front:hover ~ .sticky-btn-money3 {
+    z-index: 600;
+    transform: translateY(-4.6rem) translateX(-2.5rem) rotateZ(-1deg) scale(1);
+}
