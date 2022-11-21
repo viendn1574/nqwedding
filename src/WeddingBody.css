@@ -471,7 +471,7 @@
     height: 12px;
     z-index: 3;
     background: url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/arrow-left.svg') no-repeat;
-    background-position: center center;
+    background-position: center left;
     background-size: cover;
     transition: all .2s ease-out;
 }
@@ -491,6 +491,17 @@
     
 }
 
+@media screen and (max-width: 400px) {
+    .slick-arrow-left {
+        left: 60px;
+        width: 60px;
+    }
+    .slick-arrow-left:hover {
+        left: 50px;
+    }
+    
+}
+
 .slick-arrow-right {
     position: absolute;
     bottom: -30px;
@@ -501,7 +512,7 @@
     z-index: 3;
     left: 150px;
     background: url('https://nqwedding.s3.ap-southeast-1.amazonaws.com/arrow-right.svg') no-repeat;
-    background-position: center center;
+    background-position: center right;
     background-size: cover;
     transition: all .2s ease-out;
 }
@@ -511,11 +522,18 @@
 }
 @media screen and (max-width: 920px) {
     .slick-arrow-right {
-        left: 180px;
+        left: 190px;
         width: 100px;
     }
     .slick-arrow-right:hover {
         left: 190px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .slick-arrow-right {
+        left: 170px;
+        width: 60px;
     }
 }
 .photos {
