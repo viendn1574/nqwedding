@@ -21,7 +21,6 @@ const addGift = async (name: string, gift: string) => {
             gift: gift
         }
     });
-    console.log(res);
 }
 
 export default function ModalSendGift(probs: ModalSendGiftProbs) {

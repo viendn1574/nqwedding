@@ -68,10 +68,11 @@ export class WeddingBody extends React.Component {
     }
     interval: any = undefined;
     componentDidMount() {
-        API.get("giftapi","/gifts",{}).then((gift) => {this.giftList = gift; console.log(gift)});
+        API.get("giftapi","/gifts",{}).then((gift) => {this.giftList = gift});
         this.interval = setInterval(() => {
             if (this.indexGift === this.giftList.length) {
                 this.indexGift = 0;
+                API.get("giftapi","/gifts",{}).then((gift) => {this.giftList = gift});
             }
             this.setState({ openSnackBar: true });
         }, 6000);
