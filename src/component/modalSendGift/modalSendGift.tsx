@@ -5,12 +5,23 @@ import { Button } from '@mui/material';
 import { giftList } from './Gift.constant';
 import Modal from 'react-bootstrap/Modal';
 import './modalSendGift.css'
+import { API } from 'aws-amplify';
+import { v4 as uuidv4 } from 'uuid';
 interface ModalSendGiftProbs {
     setShowModal: any;
 }
 
-const addGift = (name: string, gift: string) => {
+const addGift = async (name: string, gift: string) => {
     giftList.push({name, gift});
+    const id = uuidv4();
+    const res = await API.post("giftapi","/gifts", {
+        body: {
+            id: `${id}`,
+            name: name,
+            gift: gift
+        }
+    });
+    console.log(res);
 }
 
 export default function ModalSendGift(probs: ModalSendGiftProbs) {

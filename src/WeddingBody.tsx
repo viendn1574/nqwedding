@@ -1,19 +1,18 @@
 import React from 'react';
 import Slider from "react-slick";
 import './WeddingBody.css';
-import { Swiper, SwiperSlide } from "swiper/react";
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
+import config from './aws-exports'
 // import required modules
 import Gallery from './component/gallery/gallery';
 import GridGallery from './component/gallery/gridGallery';
-import { Button, CardMedia, Snackbar } from '@mui/material';
+import { CardMedia, Snackbar } from '@mui/material';
 import { PhotoType } from './component/gallery/Photo';
 import { scroller } from "react-scroll";
 import ModalSendGift from './component/modalSendGift/modalSendGift';
-import { giftList } from './component/modalSendGift/Gift.constant';
+import { API } from 'aws-amplify';
+import * as Amplify from 'aws-amplify';
 
+Amplify.Amplify.configure(config);
 function SampleNextArrow(props: any) {
     const { onClick } = props;
     return (
@@ -50,9 +49,9 @@ export class WeddingBody extends React.Component {
         showSendGift : false,
         openSnackBar : false
     };
-
+    
     indexGift = 0;
-
+    giftList : any = [];
     settings = {
         dots: false,
         infinite: true,
@@ -69,8 +68,9 @@ export class WeddingBody extends React.Component {
     }
     interval: any = undefined;
     componentDidMount() {
+        API.get("giftapi","/gifts",{}).then((gift) => {this.giftList = gift; console.log(gift)});
         this.interval = setInterval(() => {
-            if (this.indexGift === giftList.length) {
+            if (this.indexGift === this.giftList.length) {
                 this.indexGift = 0;
             }
             this.setState({ openSnackBar: true });
@@ -345,7 +345,7 @@ Mãi thương ❤
             </div>
             { this.state.openSnackBar && <Snackbar
                 autoHideDuration={3000}
-                open={this.state.openSnackBar}
+                open
                 ContentProps={{
                     sx: {
                         background: "white"
@@ -358,13 +358,13 @@ Mãi thương ❤
                             fontSize:'20px',
                             fontWeight:'200',
                             color: 'black'
-                        }}> {giftList[this.indexGift].name} </span>
+                        }}> {this.giftList[this.indexGift].name} </span>
                         <span style={{
                                 fontFamily: 'Marcellus',
                                 fontSize:'15px',
                                 fontWeight:'100',
                                 color: 'black'
-                        }}> {giftList[this.indexGift].gift} </span>
+                        }}> {this.giftList[this.indexGift].gift} </span>
                     </div>
                 }
                 onClose={() => {this.setState({openSnackBar: false}); this.indexGift++;}}
