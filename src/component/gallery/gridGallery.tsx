@@ -1,4 +1,3 @@
-import { CardMedia } from '@mui/material';
 import { useState } from 'react';
 import ModalImage from '../modalImg/modalImg';
 interface RepairCardProns {
@@ -16,7 +15,7 @@ function RepairCard(probs: RepairCardProns) {
     return (
 		<>
             <div className='repair_card d-flex flex-column align-items-center text-center' onClick={()=> {onClick(type, title, desc , imgURL)}}>
-                {type === 'image' && <img className="repair_card_img" src={urlImg}/>}
+                {type === 'image' && <img className="repair_card_img" src={urlImg} alt=''/>}
                 {type === 'video' && <video className="repair_card_img" playsInline autoPlay loop muted controls src={urlImg} poster={posterVideo ?? ''}/>}
                 <div className=' repair_card_title d-inline-block text-truncate'>
                     {title}
@@ -47,10 +46,6 @@ export default function GridGallery() {
             setDescImg(desc);
             setType(type);
 	}
-
-
-	// The scrollingElement is usually the window, if you are scrolling inside another element, suplly it here
-	const scrollingElement = window;
 
 	return (
 		<>

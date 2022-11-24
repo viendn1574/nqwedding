@@ -2,12 +2,18 @@ import React, { useState } from 'react';
 import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import { eightYearsPhotosSmall } from './Photo.constants';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
 import { useParams } from 'react-router-dom';
 import { scroller } from 'react-scroll';
 import ModalImage from '../modalImg/modalImg';
+
+export enum PhotoType {
+    EightYear,
+    Wedding,
+    WeddingTP,
+}
+
 
 const Photo: React.FunctionComponent = () => {
     const { type } = useParams();
@@ -24,10 +30,10 @@ const Photo: React.FunctionComponent = () => {
 
     const setImg = (e: any) => {
         let url:string = e.target.currentSrc;
-		if (url.indexOf('8nam_showmore_ava') != -1) {
+		if (url.indexOf('8nam_showmore_ava') !== -1) {
 			url = url.replace('8nam_showmore_ava', '8nam_showmore');
 		}
-        if (url.indexOf('cuoi_ava') != -1) {
+        if (url.indexOf('cuoi_ava') !== -1) {
 			url = url.replace('cuoi_ava', 'cuoi');
 		}
 		setimgUrl(url);
@@ -114,12 +120,6 @@ const Photo: React.FunctionComponent = () => {
 }
 
 export default Photo;
-
-export enum PhotoType {
-    EightYear,
-    Wedding,
-    WeddingTP,
-}
 
 interface TabPanelProps {
     children?: React.ReactNode;

@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Modal from 'react-bootstrap/Modal';
 
 interface ModalImgProbs {
@@ -12,15 +12,8 @@ interface ModalImgProbs {
 }
 
 export default function ModalImage(probs: ModalImgProbs) {
-    const values = [true, 'sm-down', 'md-down', 'lg-down', 'xl-down', 'xxl-down'];
-    const [fullscreen, setFullscreen] = useState(true);
     const [show, setShow] = useState(true);
     const { urlImg, setShowModal, title, desc, type } = probs;  
-
-    function handleShow(breakpoint: any) {
-        setFullscreen(breakpoint);
-        setShow(true);
-    }
 
     return (
         <>

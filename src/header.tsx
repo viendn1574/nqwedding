@@ -7,9 +7,6 @@ import Navbar from 'react-bootstrap/Navbar';
 import { scroller } from "react-scroll";
 
 export class WeddingHeader extends React.Component {
-    constructor(props: any) {
-        super(props);
-    }
 
     state = {
         days: undefined,

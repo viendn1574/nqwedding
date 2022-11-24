@@ -14,7 +14,7 @@ interface ModalSendGiftProbs {
 const addGift = async (name: string, gift: string) => {
     giftList.push({name, gift});
     const id = uuidv4();
-    const res = await API.post("giftapi","/gifts", {
+    API.post("giftapi","/gifts", {
         body: {
             id: `${id}`,
             name: name,

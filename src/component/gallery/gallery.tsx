@@ -28,21 +28,21 @@ export default function Gallery(props: GalleryProps) {
 	const { type , enableShowMore} = props;
 	const setImg = (e: any) => {
 		let url:string = e.target.currentSrc;
-		if (url.indexOf('weddingPhotos_ava_large') != -1) {
+		if (url.indexOf('weddingPhotos_ava_large') !== -1) {
 			url = url.replace('weddingPhotos_ava_large', 'weddingPhotos');
-		} else if (url.indexOf('weddingPhotos_ava') != -1) {
+		} else if (url.indexOf('weddingPhotos_ava') !== -1) {
 			url = url.replace('weddingPhotos_ava', 'weddingPhotos');
 		};
 
-		if (url.indexOf('cuoiTP_ava_large') != -1) {
+		if (url.indexOf('cuoiTP_ava_large') !== -1) {
 			url = url.replace('cuoiTP_ava_large', 'cuoiTP');
-		} else if (url.indexOf('cuoiTP_ava') != -1) {
+		} else if (url.indexOf('cuoiTP_ava') !== -1) {
 			url = url.replace('cuoiTP_ava', 'cuoiTP');
 		};
 
-		if (url.indexOf('8nam_ava_large') != -1) {
+		if (url.indexOf('8nam_ava_large') !== -1) {
 			url = url.replace('8nam_ava_large', '8nam');
-		} else if (url.indexOf('8nam_ava') != -1) {
+		} else if (url.indexOf('8nam_ava') !== -1) {
 			url = url.replace('8nam_ava', '8nam');
 		};
 

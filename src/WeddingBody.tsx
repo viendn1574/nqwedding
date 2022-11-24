@@ -295,7 +295,7 @@ Mãi thương ❤
                         </div>
                         <div className="address__map-container--left address__map">
                             <div className="address__map--ceremony map" id="address__map--ceremony">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.838231688447!2d106.69901301474866!3d10.746947992341525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fbfac598f1d%3A0x4f93c41dae417dc0!2sMaiSon%20de%20Charme%20-%20Restaurant%20%26%20Events!5e0!3m2!1sen!2sbg!4v1664899888640!5m2!1sen!2sbg" style={{border:0 , width:'100%', height: '100%'}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe title='Maision' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.838231688447!2d106.69901301474866!3d10.746947992341525!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752fbfac598f1d%3A0x4f93c41dae417dc0!2sMaiSon%20de%20Charme%20-%20Restaurant%20%26%20Events!5e0!3m2!1sen!2sbg!4v1664899888640!5m2!1sen!2sbg" style={{border:0 , width:'100%', height: '100%'}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -321,7 +321,7 @@ Mãi thương ❤
                         </div>
                         <div className="address__map-container--left address__map">
                             <div className="address__map--ceremony map" id="address__map--ceremony">
-                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3008737273503!2d106.623220914749!3d10.788252392313469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752d9d5888fc19%3A0x172d76a84a0ca188!2zVHJ1bmcgdMOibSBo4buZaSBuZ2jhu4sgdGnhu4djIGPGsOG7m2kgQXNpYW5hIFBsYXphIChUw6JuIFBow7op!5e0!3m2!1sen!2s!4v1665053174644!5m2!1sen!2s" style={{border:0 , width:'100%', height: '100%'}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
+                                <iframe title='ASIANA' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3008737273503!2d106.623220914749!3d10.788252392313469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752d9d5888fc19%3A0x172d76a84a0ca188!2zVHJ1bmcgdMOibSBo4buZaSBuZ2jhu4sgdGnhu4djIGPGsOG7m2kgQXNpYW5hIFBsYXphIChUw6JuIFBow7op!5e0!3m2!1sen!2s!4v1665053174644!5m2!1sen!2s" style={{border:0 , width:'100%', height: '100%'}} allowFullScreen loading="lazy" referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </div>
                     </div>
@@ -330,7 +330,7 @@ Mãi thương ❤
             </section>
             {showSendGift && <ModalSendGift setShowModal={this.setShowSendGift}/>}
             <div data-id="donate-fab" id="call-to-donate" style={{bottom: '45px'}} onClick={ ()=> this.setShowSendGift(true)}>
-                <a>
+                <div>
                     <div className="sticky-btn-wrapper">
                         <img src="https://static.namtay.vn/assets/img/front.png" alt="" className="sticky-btn-front"/>
                         <svg width="86" height="97" viewBox="0 0 86 97" fill="none" className="sticky-btn-opener">
@@ -342,7 +342,7 @@ Mãi thương ❤
                         <img src="https://static.namtay.vn/assets/img/money2.png" alt="" className="sticky-btn-money2"/>
                         <img src="https://static.namtay.vn/assets/img/money3.png" alt="" className="sticky-btn-money3"/>
                     </div>
-                </a>
+                </div>
             </div>
             { this.state.openSnackBar && <Snackbar
                 autoHideDuration={3000}
