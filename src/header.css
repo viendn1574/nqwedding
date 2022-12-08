@@ -237,6 +237,58 @@
     }
 }
 
+.countdown__title_2 {
+    font-size: 25px;
+    line-height: 44px;
+    text-align: center;
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    color: #7E3117;
+    text-transform: capitalize;
+    white-space: nowrap;
+    margin-bottom: 32px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .countdown__title_2 {
+        font-size: 35px;
+        line-height: 112px;
+    }   
+}
+@media only screen and (max-width: 800px) {
+    .countdown__title_2 {
+        font-size: 30px;
+        line-height: 82px;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .countdown__title_2 {
+        font-size: 20px;
+        line-height: 72px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .countdown__title_2 {
+        padding-top: 56px;
+        line-height: 0px;
+    }
+}
+
+
+@media only screen and (max-width: 400px) {
+    .countdown__title_2 {
+        font-size: 15px;
+
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .countdown__title_2 {
+        font-size: 13px;
+    }
+}
+
 .countdown__block {
     display: -webkit-box;
     display: -webkit-flex;

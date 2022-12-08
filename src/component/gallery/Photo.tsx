@@ -14,7 +14,6 @@ export enum PhotoType {
     WeddingTP,
 }
 
-
 const Photo: React.FunctionComponent = () => {
     const { type } = useParams();
     const [imgUrl, setimgUrl] = useState('');

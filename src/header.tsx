@@ -1,31 +1,47 @@
-import moment from 'moment';
 import React from 'react';
 import './header.css';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { scroller } from "react-scroll";
-
 export class WeddingHeader extends React.Component {
 
     state = {
         days: undefined,
         hours: undefined,
         minutes: undefined,
-        seconds: undefined
+        seconds: undefined,
+        countdownDone: false,
     };
     interval: any = undefined;
     componentDidMount() {
         (document?.getElementById('audio') as any)?.play();
         this.interval = setInterval(() => {
-            const then = moment("25122022180000", "DDMMYYYYhhmmss");
-            const now = moment();
-            const countdown = moment(then.valueOf() - now.valueOf());
-            const days = countdown.format('DDD');
-            const hours = countdown.format('HH');
-            const minutes = countdown.format('mm');
-            const seconds = countdown.format('ss');
-            this.setState({ days, hours, minutes, seconds });
+            let then = new Date("December 25, 2022 18:00:00").getTime();
+            let now = new Date().getTime();
+            let countdown = then - now;
+            let days = Math.floor(countdown / (1000 * 60 * 60 * 24));;
+            let hours = Math.floor((countdown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));;
+            let minutes = Math.floor((countdown % (1000 * 60 * 60)) / (1000 * 60));;
+            let seconds = Math.floor((countdown % (1000 * 60)) / 1000);
+            if (days + hours + minutes + seconds < 0) {
+                then = new Date("December 30, 2022 18:00:00").getTime();
+                now = new Date().getTime();
+                countdown = then - now;
+                days = Math.floor(countdown / (1000 * 60 * 60 * 24));;
+                hours = Math.floor((countdown % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));;
+                minutes = Math.floor((countdown % (1000 * 60 * 60)) / (1000 * 60));;
+                seconds = Math.floor((countdown % (1000 * 60)) / 1000);
+                if (days + hours + minutes + seconds < 0) { 
+                    this.setState({countdownDone: true});
+                } else {
+                    this.setState({ days, hours, minutes, seconds });
+                }
+
+            } else {
+                this.setState({ days, hours, minutes, seconds });
+            }
+
         }, 1000);
     }
     componentWillUnmount() {
@@ -45,10 +61,7 @@ export class WeddingHeader extends React.Component {
     }
     
     render(): React.ReactNode {
-        const { days, hours, minutes, seconds } = this.state;
-        if (!seconds) {
-            return null;
-        }
+        const { days, hours, minutes, seconds, countdownDone } = this.state;
         return (
             <header>
                 <div className='position-absolute w-100'>
@@ -98,8 +111,9 @@ export class WeddingHeader extends React.Component {
                     </div>
                 </div>
                 <div className="header__countdown d-flex flex-column justify-content-center align-items-center">
-                    <p className="countdown__title text--colored">Vậy là tụi mình cưới nhau</p>
-                    <div className="countdown__block countdown">
+                    {!countdownDone && <p className="countdown__title text--colored">Vậy là tụi mình cưới nhau</p>}
+                    {countdownDone && <p className="countdown__title_2 text--colored">Vậy là tụi mình thành vợ chồng</p>}
+                    {!countdownDone && <div className="countdown__block countdown">
                         <div className="countdown__element countdown__days border--colored"> 
                             <span className="count days text--colored">{days}</span><br/>
                             <span className="label days_ref text--colored">Ngày</span></div>
@@ -115,7 +129,7 @@ export class WeddingHeader extends React.Component {
                             <span className="count seconds text--colored">{seconds}</span><br/>
                             <span className="label seconds_ref text--colored">Giây </span>
                         </div>
-                    </div>
+                    </div>}
                     <audio
                         loop
                         autoPlay
